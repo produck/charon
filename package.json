@@ -1,0 +1,22 @@
+{
+  "name": "charon",
+  "version": "0.1.0",
+  "description": "charon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/produck/charon.git"
+  },
+  "author": "LiuQ-Q",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/produck/charon/issues"
+  },
+  "homepage": "https://github.com/produck/charon#readme",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}

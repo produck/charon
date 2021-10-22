@@ -1,0 +1,29 @@
+{
+  "name": "@produck/charon",
+  "version": "0.1.0",
+  "description": "proxy of BOM DOM and ECMAScript API",
+  "keywords": [
+    "charon"
+  ],
+  "author": "LiuQi <545784977@qq.com>",
+  "homepage": "https://github.com/produck/charon/tree/main/packages/charon#readme",
+  "license": "MIT",
+  "main": "lib/charon.js",
+  "publishConfig": {
+      "access": "public"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/produck/charon.git"
+  },
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/produck/charon/issues"
+  }
+}
