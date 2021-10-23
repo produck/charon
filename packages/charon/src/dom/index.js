@@ -1,5 +1,4 @@
-import addEventListener from './addEventListener.js';
+/** @namespace Dom */
 
-export{
-	addEventListener
-}
+export { addEventListener } from './addEventListener.js';
+export { removeEventListener } from './removeEventListener.js';
