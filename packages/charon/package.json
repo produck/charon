@@ -8,13 +8,11 @@
   "author": "LiuQi <545784977@qq.com>",
   "homepage": "https://github.com/produck/charon/tree/main/packages/charon#readme",
   "license": "MIT",
-  "main": "lib/charon.js",
+  "main": "index.js",
+	"type": "module",
   "publishConfig": {
       "access": "public"
   },
-  "files": [
-    "lib"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/produck/charon.git"
