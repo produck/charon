@@ -1,6 +1,7 @@
 {
   "packages": [
-    "packages/charon"
+    "packages/charon",
+    "packages/examples"
   ],
   "version": "independent"
 }

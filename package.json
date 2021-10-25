@@ -4,8 +4,9 @@
   "description": "charon",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:doc": "rm -rf ./out && jsdoc ./packages/charon -r"
+    "build:doc": "rm -rf ./out && jsdoc ./packages/charon -r",
+    "deps:install": "npm install && lerna bootstrap",
+    "deps:clean": "lerna clean -y"
   },
   "repository": {
     "type": "git",

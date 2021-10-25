@@ -1,0 +1,42 @@
+{
+  "name": "examples",
+  "version": "0.1.0",
+  "private": true,
+  "description": "examples for charon",
+  "keywords": [
+    "charon",
+    "rollup",
+    "webpack"
+  ],
+  "author": "LiuQi <545784977@qq.com>",
+  "homepage": "https://github.com/produck/charon/tree/main/packages/examples#readme",
+  "license": "MIT",
+  "main": "lib/examples.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/produck/charon.git"
+  },
+  "scripts": {
+    "dev-rollup": "rollup --config script/rollup.config.dev.js --watch",
+    "build-rollup": "rm -rf ./dist/rollup && rollup --config script/rollup.config.js"
+  },
+  "bugs": {
+    "url": "https://github.com/produck/charon/issues"
+  },
+  "devDependencies": {
+    "@produck/charon": "^0.1.0",
+    "@rollup/plugin-html": "^0.2.4",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "rollup": "^2.58.1",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}
