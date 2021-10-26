@@ -1,4 +1,5 @@
-import * as Dom from './src/dom';
-import * as Lang from './src/lang';
+import * as Bom from './src/Bom';
+import * as Dom from './src/Dom';
+import * as Lang from './src/Lang';
 
-export { Dom, Lang };
+export { Bom, Dom, Lang };
