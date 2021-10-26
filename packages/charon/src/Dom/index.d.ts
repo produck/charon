@@ -1,4 +1,4 @@
-export * as Event from './event';
+export * as Event from './Event';
 
 /**
  * Sets up a function that will be called whenever the event is delivered to the element
