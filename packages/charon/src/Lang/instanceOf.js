@@ -1,10 +1,10 @@
 /**
  * @memberof Lang
  * @function instanceOf
- * @param {object} obj
- * @param {constructor} cons
- * @description return obj instanceof cons
+ * @param {object} object
+ * @param {constructor} constructor
+ * @description return object instanceof constructor
  */
-export const instanceOf = (obj, cons) => {
-	return obj instanceof cons;
+export const instanceOf = (object, constructor) => {
+	return object instanceof constructor;
 };

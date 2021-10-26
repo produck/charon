@@ -5,5 +5,5 @@
  * @description return typeof(operand)
  */
 export const typeOf = (operand) => {
-	return typeof(operand);
+	return typeof operand;
 };

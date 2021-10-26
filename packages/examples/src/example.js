@@ -5,9 +5,11 @@ btn.innerHTML = 'Click me!';
 document.body.appendChild(btn);
 
 $C.Dom.addEventListener(btn, 'click', () => {
-	console.log($C.Lang.typeof('string'), '-', $C.Lang.typeof(123), '-', $C.Lang.typeof(null));
-	console.log($C.Lang.instanceof([1, 2], Array));
-	console.log($C.Lang.instanceof({a: 1}, Object));
+	console.log($C.Lang.typeOf('string'), '-', $C.Lang.typeOf(null));
+	console.log($C.Lang.typeOfEquel(123, 'number'));
+	console.log($C.Lang.instanceOf([1, 2], Array));
+	console.log($C.Lang.Type.isString('123'));
+	console.log($C.Lang.Type.isNaN(NaN), 'isNaN');
 	$C.Lang.throwError('error1');
 	$C.Lang.throwError('error2');
 })

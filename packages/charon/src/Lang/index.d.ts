@@ -1,23 +1,14 @@
+export * as Throw from './Throw';
+export * as Type from './Type';
+
 /**
  * Runtime errors result in new Error objects being created and thrown.
  * @param message Error message.
- * @param fileName Path to file that raised this error.
- * @param lineNumber Line number in file that raised this error.
  */
-export function throwError(message: String, fileName: String, lineNumber: Number): void;
+export function throwError(message: String): void;
 
-/**
- * Creates a new ReferenceError object.
- * @param message Error message.
- * @param fileName Path to file that raised this error.
- * @param lineNumber Line number in file that raised this error.
- */
-export function throwReferenceError(message: String, fileName: String, lineNumber: Number): void;
+export function typeOf(operand: any): Boolean;
 
-/**
- * Creates a new TypeError object.
- * @param message Error message.
- * @param fileName Path to file that raised this error.
- * @param lineNumber Line number in file that raised this error.
- */
-export function throwTypeError(message: String, fileName: String, lineNumber: Number): void;
+export function typeOfEquel(operand: any, type: String): Boolean;
+
+export function instanceOf(operand: any, constructor: constructor): Boolean;
