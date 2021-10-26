@@ -4,7 +4,7 @@
   "description": "charon",
   "main": "index.js",
   "scripts": {
-    "build:doc": "rm -rf ./out && jsdoc ./packages/charon -r",
+    "build:doc": "rm -rf ./docs && jsdoc -c ./.jsdoc.json --verbose",
     "deps:install": "npm install && lerna bootstrap",
     "deps:clean": "lerna clean -y"
   },
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/produck/charon#readme",
   "devDependencies": {
     "jsdoc": "^3.6.7",
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "minami": "^1.2.3"
   }
 }

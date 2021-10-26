@@ -1,11 +1,11 @@
 import { instanceOf } from "../../Lang/instanceOf.js";
 
 /**
- * @memberof Type
+ * determines whether a operand is array or not
+ * @memberof Lang.Type
  * @function isArray
  * @param {operand} operand
- * @returns {Boolean} result
- * @description determines whether a operand is array or not
+ * @returns {Boolean}
  */
 export const isArray = (operand) => {
 	return instanceOf(operand, Array);

@@ -1,9 +1,9 @@
 /**
- * @memberof Type
+ * determines whether a operand is NaN or not
+ * @memberof Lang.Type
  * @function isNaN
  * @param {operand} operand
- * @returns {Boolean} result
- * @description determines whether a operand is NaN or not
+ * @returns {Boolean}
  */
 export const isNaN = (operand) => {
 	return !(operand === operand);

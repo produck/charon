@@ -1,7 +1,7 @@
 /** @namespace Lang */
 
-export * as Throw from './Throw';
-export * as Type from './Type';
+export * as Throw from './Throw/index.js';
+export * as Type from './Type/index.js';
 
 export { typeOf } from './typeOf.js';
 export { typeOfEquel } from './typeOfEquel.js';

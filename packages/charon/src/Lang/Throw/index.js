@@ -1,4 +1,7 @@
-/** @namespace Throw */
+/**
+ * @namespace Throw
+ * @memberof Lang
+ */
 
 export { throwEvalError } from './throwEvalError.js';
 export { throwRangeError } from './throwRangeError.js';

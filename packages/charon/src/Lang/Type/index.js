@@ -1,4 +1,7 @@
-/** @namespace Type */
+/**
+ * @namespace Type
+ * @memberof Lang
+ */
 
 export { isString } from './isString.js';
 export { isBoolean } from './isBoolean.js';

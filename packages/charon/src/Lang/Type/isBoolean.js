@@ -1,11 +1,11 @@
 import { typeOfEquel } from "../typeOfEquel.js";
 
 /**
- * @memberof Type
+ * determines whether a operand is boolean or not
+ * @memberof Lang.Type
  * @function isBoolean
  * @param {operand} operand
- * @returns {Boolean} result
- * @description determines whether a operand is boolean or not
+ * @returns {Boolean}
  */
 export const isBoolean = (operand) => {
 	return typeOfEquel(operand, 'boolean');
