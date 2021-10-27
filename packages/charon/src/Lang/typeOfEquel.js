@@ -2,8 +2,7 @@ import { typeOf } from './typeOf.js';
 
 /**
  * return typeof operand === type
- * @memberof Lang
- * @function typeOfEquel
+ * @function
  * @param {operand} operand
  * @param {string} type
  * @returns {Boolean}

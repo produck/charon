@@ -2,8 +2,7 @@ import { instanceOf } from "../../Lang/instanceOf.js";
 
 /**
  * determines whether a operand is object or not
- * @memberof Lang.Type
- * @function isObject
+ * @function
  * @param {operand} operand
  * @returns {Boolean}
  */

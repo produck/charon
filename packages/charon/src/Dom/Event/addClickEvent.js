@@ -1,7 +1,6 @@
 /**
  * element.addEventListener('click', listener)
- * @memberof Dom.Event
- * @function addClickEvent
+ * @function
  * @param {HTMLElement} element
  * @param {function} listener
  */

@@ -1,5 +1,8 @@
 /**
  * @namespace Lang
+ * @borrows typeOf as typeOf
+ * @borrows typeOfEquel as typeOfEquel
+ * @borrows instanceOf as instanceOf
  * @borrows throwError as throwError
  */
 

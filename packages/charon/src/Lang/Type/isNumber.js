@@ -2,8 +2,7 @@ import { typeOfEquel } from "../typeOfEquel.js";
 
 /**
  * determines whether a operand is number or not
- * @memberof Lang.Type
- * @function isNumber
+ * @function
  * @param {operand} operand
  * @returns {Boolean}
  */

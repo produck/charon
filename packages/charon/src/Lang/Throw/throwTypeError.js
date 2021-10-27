@@ -1,7 +1,6 @@
 /**
  * throw new TypeError(message)
- * @memberof Lang.Throw
- * @function throwTypeError
+ * @function
  * @param {String} message
  */
 export const throwTypeError = (message) => {

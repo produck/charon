@@ -1,7 +1,6 @@
 /**
  * throw new ReferenceError(message)
- * @memberof Lang.Throw
- * @function throwReferenceError
+ * @function
  * @param {String} message
  */
 export const throwReferenceError = (message) => {

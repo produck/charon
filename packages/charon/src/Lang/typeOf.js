@@ -1,7 +1,6 @@
 /**
  * return typeof operand
- * @memberof Lang
- * @function typeOf
+ * @function
  * @param {operand} operand
  */
 export const typeOf = (operand) => {

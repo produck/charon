@@ -1,7 +1,6 @@
 /**
  * determines whether a operand is null or not
- * @memberof Lang.Type
- * @function isNull
+ * @function
  * @param {operand} operand
  * @returns {Boolean}
  */

@@ -1,7 +1,6 @@
 /**
  * addEventListener
- * @memberof Dom
- * @function addEventListener
+ * @function
  * @param {HTMLElement} element
  * @param {string} event
  * @param {function} listener

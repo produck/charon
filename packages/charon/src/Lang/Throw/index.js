@@ -2,6 +2,12 @@
  * @namespace Throw
  * @memberof Lang
  * @borrows throwError as Error
+ * @borrows throwEvalError as EvalError
+ * @borrows throwRangeError as RangeError
+ * @borrows throwReferenceError as ReferenceError
+ * @borrows throwSyntaxError as SyntaxError
+ * @borrows throwTypeError as TypeError
+ * @borrows throwURIError as URIError
  */
 
 export { throwError as Error } from './throwError.js';

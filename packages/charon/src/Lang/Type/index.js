@@ -1,6 +1,14 @@
 /**
  * @namespace Type
  * @memberof Lang
+ * @borrows isString as isString
+ * @borrows isBoolean as isBoolean
+ * @borrows isNumber as isNumber
+ * @borrows isArray as isArray
+ * @borrows isObject as isObject
+ * @borrows isNull as isNull
+ * @borrows isUndefined as isUndefined
+ * @borrows isNaN as isNaN
  */
 
 export { isString } from './isString.js';

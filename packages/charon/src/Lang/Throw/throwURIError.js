@@ -1,7 +1,6 @@
 /**
  * throw new URIError(message)
- * @memberof Lang.Throw
- * @function throwURIError
+ * @function
  * @param {String} message
  */
 export const throwURIError = (message) => {

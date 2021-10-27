@@ -1,7 +1,6 @@
 /**
  * throw new EvalError(message)
- * @memberof Lang.Throw
- * @function throwEvalError
+ * @function
  * @param {String} message
  */
 export const throwEvalError = (message) => {

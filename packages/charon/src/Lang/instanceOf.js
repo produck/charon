@@ -1,7 +1,6 @@
 /**
  * return object instanceof constructor
- * @memberof Lang
- * @function instanceOf
+ * @function
  * @param {object} object
  * @param {constructor} constructor
  */

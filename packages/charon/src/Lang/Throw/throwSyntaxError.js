@@ -1,7 +1,6 @@
 /**
  * throw new SyntaxError(message)
- * @memberof Lang.Throw
- * @function throwSyntaxError
+ * @function
  * @param {String} message
  */
 export const throwSyntaxError = (message) => {

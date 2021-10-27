@@ -1,7 +1,6 @@
 /**
  * throw new RangeError(message)
- * @memberof Lang.Throw
- * @function throwRangeError
+ * @function
  * @param {String} message
  */
 export const throwRangeError = (message) => {

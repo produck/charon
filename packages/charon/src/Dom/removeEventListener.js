@@ -2,8 +2,7 @@
 
 /**
  * removeEventListener
- * @memberof Dom
- * @function removeEventListener
+ * @function
  * @param {HTMLElement} element
  * @param {string} event
  * @param {requestCallback} listener

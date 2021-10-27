@@ -1,7 +1,6 @@
 /**
  * determines whether a operand is undefined or not
- * @memberof Lang.Type
- * @function isUndefined
+ * @function
  * @param {operand} operand
  * @returns {Boolean}
  */
