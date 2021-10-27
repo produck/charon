@@ -1,4 +1,7 @@
-/** @namespace Lang */
+/**
+ * @namespace Lang
+ * @borrows throwError as throwError
+ */
 
 export * as Throw from './Throw/index.js';
 export * as Type from './Type/index.js';

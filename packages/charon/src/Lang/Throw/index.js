@@ -1,9 +1,10 @@
 /**
  * @namespace Throw
  * @memberof Lang
+ * @borrows throwError as Error
  */
 
-export { throwError as Error } from './throwError';
+export { throwError as Error } from './throwError.js';
 export { throwEvalError as EvalError } from './throwEvalError.js';
 export { throwRangeError as RangeError } from './throwRangeError.js';
 export { throwReferenceError as ReferenceError } from './throwReferenceError.js';

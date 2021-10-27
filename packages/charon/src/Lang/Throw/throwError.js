@@ -1,7 +1,6 @@
 /**
  * throw new Error(message)
- * @memberof Lang
- * @function throwError
+ * @function
  * @param {String} message
  */
 export const throwError = (message) => {
