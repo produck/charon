@@ -1,8 +1,8 @@
+import { throwError } from './throwError.js';
+
 /**
  * throw new EvalError(message)
  * @function
  * @param {string} message
  */
-export const throwEvalError = (message) => {
-	throw new EvalError(message);
-};
+export const throwEvalError = (message) => throwError(message, EvalError);

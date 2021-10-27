@@ -12,5 +12,6 @@ $C.Dom.addEventListener(btn, 'click', () => {
 	console.log('isArray', $C.Lang.Type.isArray([1]));
 	console.log('isNaN', $C.Lang.Type.isNaN(NaN));
 	$C.Lang.throwError('error1');
-	$C.Lang.throwError('error2');
+	$C.Lang.Throw.TypeError('error2');
+	$C.Lang.Throw.TypeError('error3');
 })
