@@ -1,7 +1,7 @@
 /**
  * throw new SyntaxError(message)
  * @function
- * @param {String} message
+ * @param {string} message
  */
 export const throwSyntaxError = (message) => {
 	throw new SyntaxError(message);

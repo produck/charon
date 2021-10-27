@@ -1,11 +1,11 @@
-import { typeOfEquel } from "../typeOfEquel.js";
+import { typeOfEquel } from '../typeOfEquel.js';
 
 /**
  * determines whether a operand is boolean or not
  * @function
- * @param {operand} operand
- * @returns {Boolean}
+ * @param {any} operand
+ * @returns {boolean}
  */
 export const isBoolean = (operand) => {
 	return typeOfEquel(operand, 'boolean');
-}
+};

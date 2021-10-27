@@ -1,11 +1,11 @@
-import { typeOfEquel } from "../typeOfEquel.js";
+import { typeOfEquel } from '../typeOfEquel.js';
 
 /**
  * determines whether a operand is string or not
  * @function
- * @param {operand} operand
- * @returns {Boolean}
+ * @param {any} operand
+ * @returns {boolean}
  */
 export const isString = (operand) => {
 	return typeOfEquel(operand, 'string');
-}
+};

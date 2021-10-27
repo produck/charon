@@ -1,7 +1,7 @@
 /**
  * return typeof operand
  * @function
- * @param {operand} operand
+ * @param {any} operand
  */
 export const typeOf = (operand) => {
 	return typeof operand;

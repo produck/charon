@@ -1,7 +1,7 @@
 /**
  * throw new Error(message)
  * @function
- * @param {String} message
+ * @param {string} message
  */
 export const throwError = (message) => {
 	throw new Error(message);

@@ -1,7 +1,7 @@
 /**
  * determines whether a operand is NaN or not
  * @function
- * @returns {Boolean}
+ * @returns {boolean}
  */
 
-export const isNaN = Number.isNaN
+export const isNaN = Number.isNaN;

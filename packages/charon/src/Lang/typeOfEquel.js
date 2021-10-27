@@ -3,9 +3,9 @@ import { typeOf } from './typeOf.js';
 /**
  * return typeof operand === type
  * @function
- * @param {operand} operand
+ * @param {any} operand
  * @param {string} type
- * @returns {Boolean}
+ * @returns {boolean}
  */
 export const typeOfEquel = (operand, type) => {
 	return typeOf(operand) === type;

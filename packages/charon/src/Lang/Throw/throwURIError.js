@@ -1,7 +1,7 @@
 /**
  * throw new URIError(message)
  * @function
- * @param {String} message
+ * @param {string} message
  */
 export const throwURIError = (message) => {
 	throw new URIError(message);

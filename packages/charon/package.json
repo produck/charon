@@ -9,9 +9,9 @@
   "homepage": "https://github.com/produck/charon/tree/main/packages/charon#readme",
   "license": "MIT",
   "main": "index.js",
-	"type": "module",
+  "type": "module",
   "publishConfig": {
-      "access": "public"
+    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "types": "index.d.ts",
   "bugs": {
     "url": "https://github.com/produck/charon/issues"
+  },
+  "devDependencies": {
+    "eslint": "^8.1.0"
   }
 }

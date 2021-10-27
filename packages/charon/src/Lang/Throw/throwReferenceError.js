@@ -1,7 +1,7 @@
 /**
  * throw new ReferenceError(message)
  * @function
- * @param {String} message
+ * @param {string} message
  */
 export const throwReferenceError = (message) => {
 	throw new ReferenceError(message);

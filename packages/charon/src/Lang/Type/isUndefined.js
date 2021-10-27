@@ -1,9 +1,9 @@
 /**
  * determines whether a operand is undefined or not
  * @function
- * @param {operand} operand
- * @returns {Boolean}
+ * @param {any} operand
+ * @returns {boolean}
  */
- export const isUndefined = (operand) => {
+export const isUndefined = (operand) => {
 	return operand === undefined;
-}
+};

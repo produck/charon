@@ -1,7 +1,7 @@
 /**
  * determines whether a operand is array or not
  * @function
- * @returns {Boolean}
+ * @returns {boolean}
  */
 
 export const isArray = Array.isArray;
