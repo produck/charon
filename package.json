@@ -5,9 +5,7 @@
   "scripts": {
     "build:doc": "rm -rf ./docs && jsdoc -c ./.jsdoc.json --verbose",
     "deps:install": "npm install && lerna bootstrap",
-    "deps:clean": "lerna clean -y",
-		"lint": "lerna run lint",
-		"prepublish": "npm run lint"
+    "deps:clean": "lerna clean -y"
   },
   "repository": {
     "type": "git",

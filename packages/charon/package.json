@@ -28,7 +28,8 @@
     "url": "git+https://github.com/produck/charon.git"
   },
 	"scripts": {
-    "lint": "eslint --fix ./**/*.js"
+    "lint": "eslint --fix ./**/*.js",
+		"prepublish": "npm run lint"
   },
   "bugs": {
     "url": "https://github.com/produck/charon/issues"
