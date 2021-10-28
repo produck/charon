@@ -3,7 +3,11 @@
   "version": "0.1.1",
   "private": true,
   "description": "examples for charon",
-  "author": "LiuQi <545784977@qq.com>",
+  "author": "LiuQ-Q",
+	"contributors": [
+		"ChaosLee",
+		"LiuQ-Q"
+	],
   "license": "MIT",
   "main": "lib/examples.js",
   "repository": {

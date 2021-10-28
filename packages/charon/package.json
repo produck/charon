@@ -1,11 +1,21 @@
 {
   "name": "@produck/charon",
   "version": "0.1.1",
-  "description": "proxy of BOM DOM and ECMAScript API",
+  "description": "Doing small thing for compressing bundle by tree shaking",
+	"files": [
+		"index.js",
+		"src"
+	],
   "keywords": [
-    "charon"
+    "charon",
+		"rollup",
+		"webpack"
   ],
-  "author": "LiuQi <545784977@qq.com>",
+  "author": "LiuQ-Q",
+	"contributors": [
+		"ChaosLee",
+		"LiuQ-Q"
+	],
   "homepage": "https://github.com/produck/charon/tree/main/packages/charon#readme",
   "license": "MIT",
   "main": "index.js",
@@ -17,7 +27,9 @@
     "type": "git",
     "url": "git+https://github.com/produck/charon.git"
   },
-  "types": "index.d.ts",
+	"scripts": {
+    "lint": "eslint --fix ./**/*.js"
+  },
   "bugs": {
     "url": "https://github.com/produck/charon/issues"
   },

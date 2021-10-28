@@ -11,11 +11,14 @@
  * @borrows isNaN as isNaN
  */
 
-export { isString } from './isString.js';
-export { isBoolean } from './isBoolean.js';
-export { isNumber } from './isNumber.js';
-export { isArray } from './isArray.js';
-export { isObject } from './isObject.js';
-export { isNull } from './isNull.js';
-export { isUndefined } from './isUndefined.js';
-export { isNaN } from './isNaN.js';
+export * as Is from './Is/index.js';
+export * as Not from './Not/index.js';
+
+export { isString } from './Is/isString.js';
+export { isBoolean } from './Is/isBoolean.js';
+export { isNumber } from './Is/isNumber.js';
+export { isArray } from './Is/isArray.js';
+export { isObject } from './Is/isObject.js';
+export { isNull } from './Is/isNull.js';
+export { isUndefined } from './Is/isUndefined.js';
+export { isNaN } from './Is/isNaN.js';

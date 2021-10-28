@@ -1,18 +1,23 @@
 {
   "name": "charon",
   "version": "0.1.0",
-  "description": "charon",
-  "main": "index.js",
+  "description": "Doing small thing for compressing bundle by tree shaking",
   "scripts": {
     "build:doc": "rm -rf ./docs && jsdoc -c ./.jsdoc.json --verbose",
     "deps:install": "npm install && lerna bootstrap",
-    "deps:clean": "lerna clean -y"
+    "deps:clean": "lerna clean -y",
+		"lint": "lerna run lint",
+		"prepublish": "npm run lint"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/produck/charon.git"
   },
   "author": "LiuQ-Q",
+	"contributors": [
+		"ChaosLee",
+		"LiuQ-Q"
+	],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/produck/charon/issues"
