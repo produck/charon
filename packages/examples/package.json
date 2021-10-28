@@ -1,13 +1,13 @@
 {
   "name": "examples",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "description": "examples for charon",
   "author": "LiuQ-Q",
-	"contributors": [
-		"ChaosLee",
-		"LiuQ-Q"
-	],
+  "contributors": [
+    "ChaosLee",
+    "LiuQ-Q"
+  ],
   "license": "MIT",
   "main": "lib/examples.js",
   "repository": {
@@ -19,7 +19,7 @@
     "build-rollup": "rm -rf ./dist/rollup && rollup --config script/rollup.config.js"
   },
   "devDependencies": {
-    "@produck/charon": "^0.1.1",
+    "@produck/charon": "^0.1.2",
     "@rollup/plugin-html": "^0.2.4",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "rollup": "^2.58.1",

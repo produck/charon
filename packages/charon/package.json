@@ -1,21 +1,21 @@
 {
   "name": "@produck/charon",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Doing small thing for compressing bundle by tree shaking",
-	"files": [
-		"index.js",
-		"src"
-	],
+  "files": [
+    "index.js",
+    "src"
+  ],
   "keywords": [
     "charon",
-		"rollup",
-		"webpack"
+    "rollup",
+    "webpack"
   ],
   "author": "LiuQ-Q",
-	"contributors": [
-		"ChaosLee",
-		"LiuQ-Q"
-	],
+  "contributors": [
+    "ChaosLee",
+    "LiuQ-Q"
+  ],
   "homepage": "https://github.com/produck/charon/tree/main/packages/charon#readme",
   "license": "MIT",
   "main": "index.js",
@@ -27,9 +27,9 @@
     "type": "git",
     "url": "git+https://github.com/produck/charon.git"
   },
-	"scripts": {
+  "scripts": {
     "lint": "eslint --fix ./**/*.js",
-		"prepublish": "npm run lint"
+    "prepublish": "npm run lint"
   },
   "bugs": {
     "url": "https://github.com/produck/charon/issues"
