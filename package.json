@@ -12,10 +12,10 @@
     "url": "git+https://github.com/produck/charon.git"
   },
   "author": "LiuQ-Q",
-	"contributors": [
-		"ChaosLee",
-		"LiuQ-Q"
-	],
+  "contributors": [
+    "ChaosLee",
+    "LiuQ-Q"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/produck/charon/issues"

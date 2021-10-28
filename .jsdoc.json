@@ -1,6 +1,6 @@
 {
   "source": {
-    "include": ["./packages/charon/src", "README.md"],
+    "include": ["./packages/charon/src", "./packages/charon/README.md"],
     "exclude": ["./docs", "./dist", "./node_modules"],
     "includePattern": ".js$"
   },
