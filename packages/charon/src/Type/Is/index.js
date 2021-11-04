@@ -1,6 +1,6 @@
 /**
  * @namespace Is
- * @memberof Lang.Type
+ * @memberof Type
  * @borrows isString as String
  * @borrows isArray as Array
  * @borrows isBoolean as Boolean

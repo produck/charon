@@ -1,6 +1,5 @@
 /**
  * @namespace Type
- * @memberof Lang
  * @borrows isString as isString
  * @borrows isBoolean as isBoolean
  * @borrows isNumber as isNumber

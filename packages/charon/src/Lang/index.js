@@ -7,9 +7,8 @@
  */
 
 import * as Throw from './Throw/index.js';
-import * as Type from './Type/index.js';
 
-export { Throw, Type };
+export { Throw };
 export { typeOf } from './typeOf.js';
 export { typeOfEquel } from './typeOfEquel.js';
 export { instanceOf } from './instanceOf.js';

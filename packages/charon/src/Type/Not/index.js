@@ -1,6 +1,6 @@
 /**
  * @namespace Not
- * @memberof Lang.Type
+ * @memberof Type
  * @borrows isNotString as String
  * @borrows isNotArray as Array
  * @borrows isNotBoolean as Boolean

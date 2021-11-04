@@ -1,4 +1,4 @@
-import { typeOfEquel } from '../../typeOfEquel.js';
+import { typeOfEquel } from '../../Lang/typeOfEquel.js';
 
 /**
  * determines whether a operand is object or not
