@@ -1,0 +1,1 @@
+export function isNotObject(operand: any): boolean;

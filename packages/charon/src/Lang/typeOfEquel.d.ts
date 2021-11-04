@@ -1,0 +1,1 @@
+export function typeOfEquel(operand: any, type: string): boolean;

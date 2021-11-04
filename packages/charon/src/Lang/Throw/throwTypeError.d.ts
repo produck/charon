@@ -1,0 +1,1 @@
+export function throwTypeError(message: string): unknown;

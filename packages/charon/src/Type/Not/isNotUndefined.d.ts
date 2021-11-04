@@ -1,0 +1,1 @@
+export function isNotUndefined(operand: any): boolean;

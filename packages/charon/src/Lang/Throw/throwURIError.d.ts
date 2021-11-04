@@ -1,0 +1,1 @@
+export function throwURIError(message: string): unknown;

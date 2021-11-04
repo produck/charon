@@ -1,0 +1,1 @@
+export function instanceOf(object: object, constructor: Function): boolean;

@@ -1,6 +1,7 @@
 import * as $C from '@produck/charon';
 
 const btn = document.createElement('button');
+
 btn.innerHTML = 'Click me!';
 document.body.appendChild(btn);
 

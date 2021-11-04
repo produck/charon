@@ -1,0 +1,1 @@
+export function throwReferenceError(message: string): unknown;

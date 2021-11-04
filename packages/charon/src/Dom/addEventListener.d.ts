@@ -1,0 +1,1 @@
+export function addEventListener(element: HTMLElement, event: string, listener: () => void): void;

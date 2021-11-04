@@ -1,0 +1,1 @@
+export function isNotArray(operand: any): boolean;

@@ -1,0 +1,1 @@
+export function isNull(operand: any): boolean;

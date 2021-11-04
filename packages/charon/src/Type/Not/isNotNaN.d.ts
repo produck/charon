@@ -1,0 +1,1 @@
+export function isNotNaN(operand: any): boolean;

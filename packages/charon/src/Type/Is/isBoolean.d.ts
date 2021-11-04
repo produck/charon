@@ -1,0 +1,1 @@
+export function isBoolean(operand: any): boolean;
