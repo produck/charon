@@ -11,9 +11,10 @@
  * @borrows isNaN as isNaN
  */
 
-export * as Is from './Is/index.js';
-export * as Not from './Not/index.js';
+import * as Is from './Is/index.js';
+import * as Not from './Not/index.js';
 
+export { Is, Not };
 export { isString } from './Is/isString.js';
 export { isBoolean } from './Is/isBoolean.js';
 export { isNumber } from './Is/isNumber.js';

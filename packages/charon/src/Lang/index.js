@@ -6,9 +6,10 @@
  * @borrows throwError as throwError
  */
 
-export * as Throw from './Throw/index.js';
-export * as Type from './Type/index.js';
+import * as Throw from './Throw/index.js';
+import * as Type from './Type/index.js';
 
+export { Throw, Type };
 export { typeOf } from './typeOf.js';
 export { typeOfEquel } from './typeOfEquel.js';
 export { instanceOf } from './instanceOf.js';

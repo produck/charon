@@ -4,6 +4,8 @@
  * @borrows removeEventListener as removeEventListener
  */
 
-export * as Event from './Event/index.js';
+import * as Event from './Event/index.js';
+
+export { Event };
 export { addEventListener } from './addEventListener.js';
 export { removeEventListener } from './removeEventListener.js';
