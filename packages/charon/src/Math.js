@@ -1,4 +1,4 @@
-export const MATH = Math;
+const MATH = Math;
 
 export const E = MATH.E;
 export const LN10 = MATH.LN10;

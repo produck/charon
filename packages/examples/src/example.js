@@ -35,6 +35,10 @@ $C.Dom.addEventListener(btn, 'click', () => {
 		'sqrt', $C.Math.sqrt(2),
 		'random', $C.Math.random()
 	);
+	console.log(
+		$C.Object.values({ a: 1, b: 2 }),
+		$C.Object.assign({}, {})
+	);
 	$C.Lang.throwError('error1');
 	$C.Lang.Throw.TypeError('error2');
 	$C.Lang.Throw.TypeError('error3');
