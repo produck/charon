@@ -36,9 +36,13 @@ $C.Dom.addEventListener(btn, 'click', () => {
 		'random', $C.Math.random()
 	);
 	console.log(
-		$C.Object.values({ a: 1, b: 2 }),
-		$C.Object.assign({}, {})
+		'values', $C.Object.values({ a: 1, b: 2 }),
+		'assign', $C.Object.assign({}, {})
 	);
+	console.log(
+		'has', $C.Reflect.has({}, 1),
+		'ownKeys', $C.Reflect.ownKeys({ a: 1, b: 2 })
+	)
 	$C.Lang.throwError('error1');
 	$C.Lang.Throw.TypeError('error2');
 	$C.Lang.Throw.TypeError('error3');
