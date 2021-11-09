@@ -28,7 +28,13 @@ $C.Dom.addEventListener(btn, 'click', () => {
 		'isNotNull', $C.Type.Not.Null(null),
 		'isNotUndefined', $C.Type.Not.Undefined(undefined),
 		'isNotNaN', $C.Type.Not.NaN(NaN)
-	)
+	);
+	console.log(
+		'abs', $C.Math.abs(-1),
+		'sin', $C.Math.sin(10),
+		'sqrt', $C.Math.sqrt(2),
+		'random', $C.Math.random()
+	);
 	$C.Lang.throwError('error1');
 	$C.Lang.Throw.TypeError('error2');
 	$C.Lang.Throw.TypeError('error3');

@@ -1,6 +1,6 @@
 import * as Dom from './src/Dom/index.js';
-import * as Bom from './src/Bom/index.js';
 import * as Lang from './src/Lang/index.js';
 import * as Type from './src/Type/index.js';
+import * as Math from './src/Math.js';
 
-export { Dom, Bom, Lang, Type };
+export { Dom, Lang, Type, Math };
