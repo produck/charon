@@ -36,6 +36,6 @@
     "url": "https://github.com/produck/charon/issues"
   },
   "devDependencies": {
-    "eslint": "^8.1.0"
+    "eslint": "^8.2.0"
   }
 }
