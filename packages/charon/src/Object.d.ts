@@ -1,3 +1,24 @@
 export default ObjectConstructor;
 
-declare var ObjectConstructor: ObjectConstructor;
+declare var ObjectConstructor: Pick<ObjectConstructor, "assign"
+	| "create"
+	| "defineProperties"
+	| "defineProperty"
+	| "entries"
+	| "freeze"
+	| "fromEntries"
+	| "getOwnPropertyDescriptor"
+	| "setPrototypeOf"
+	| "getOwnPropertyDescriptors"
+	| "getOwnPropertyNames"
+	| "values"
+	| "getOwnPropertySymbols"
+	| "getPrototypeOf"
+	| "is"
+	| "isExtensible"
+	| "isFrozen"
+	| "isSealed"
+	| "keys"
+	| "preventExtensions"
+	| "seal"
+>;
