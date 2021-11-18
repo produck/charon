@@ -104,5 +104,6 @@ dist
 .tern-port
 
 /out
-/docs
+docs
 .dev
+temp

@@ -28,9 +28,12 @@
     "url": "http://192.168.50.222/root/charon.git"
   },
   "scripts": {
-		"lint": "eslint --fix ./**/*.js"
+    "lint": "eslint --fix ./**/*.js",
+		"build:doc": "node scripts/make-docs.js"
   },
   "devDependencies": {
+    "@microsoft/api-documenter": "^7.13.68",
+    "@microsoft/api-extractor": "^7.18.19",
     "eslint": "^8.2.0"
   }
 }
