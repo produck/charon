@@ -1,6 +1,4 @@
 /**
- * element.addEventListener('click', listener)
- * @function
  * @param {HTMLElement} element
  * @param {function} listener
  */

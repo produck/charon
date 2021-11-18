@@ -1,0 +1,1 @@
+export { addClickEvent } from './addClickEvent.js';

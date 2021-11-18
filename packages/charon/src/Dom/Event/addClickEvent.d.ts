@@ -1,1 +1,0 @@
-export function addClickEvent(element: HTMLElement, listener: () => void): void;

@@ -1,11 +1,20 @@
 import * as $C from '@produck/charon';
+import * as $CB from '@produck/charon-browser';
 
-const btn = document.createElement('button');
+const btn = $CB.Dom.createElement('button');
+const btn2 = $CB.Dom.createElement('button');
+const btn3 = $CB.Dom.createElement('button');
 
 btn.innerHTML = 'Click me!';
-document.body.appendChild(btn);
+$CB.Dom.appendChild(document.body, btn);
 
-$C.Dom.addEventListener(btn, 'click', () => {
+btn2.innerHTML = 'remove click'
+$CB.Dom.appendChild(document.body, btn2);
+
+btn3.innerHTML = 'timer'
+$CB.Dom.appendChild(document.body, btn3);
+
+const listener = () => {
 	console.log('typeOf', $C.Lang.typeOf('string'), '-', $C.Lang.typeOf(null));
 	console.log('typeOfEquel', $C.Lang.typeOfEquel(123, 'number'));
 	console.log('instanceOf', $C.Lang.instanceOf([1, 2], Array));
@@ -46,4 +55,38 @@ $C.Dom.addEventListener(btn, 'click', () => {
 	$C.Lang.throwError('error1');
 	$C.Lang.Throw.TypeError('error2');
 	$C.Lang.Throw.TypeError('error3');
-})
+};
+
+$CB.Dom.addEventListener(btn, 'click', listener);
+
+$CB.Dom.addEventListener(btn2, 'click', () => {
+	$CB.Global.localStorage.setItem('test', 111);
+
+	$CB.Timer.Timeout(() => {
+		$CB.Dom.removeEventListener(btn, 'click', listener);
+		console.log('remove success!');
+	}, 1000)
+});
+
+let interval = null;
+let request = null;
+
+$CB.Dom.addEventListener(btn3, 'click', () => {
+	if (interval) {
+		$CB.Timer.Clear.Interval(interval);
+		interval = null;
+	} else {
+		interval = $CB.Timer.Interval(() => {
+			console.log(interval);
+		}, 1000);
+	}
+
+	if (request) {
+		$CB.Timer.Clear.AnimationFrame(request);
+		request = null;
+	} else {
+		request = $CB.Timer.AnimationFrame((timestamp) => {
+			console.log(timestamp);
+		});
+	}
+});

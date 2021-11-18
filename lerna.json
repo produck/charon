@@ -1,6 +1,7 @@
 {
   "packages": [
     "packages/charon",
+		"packages/charon-browser",
     "packages/examples"
   ],
   "version": "independent"

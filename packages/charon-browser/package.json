@@ -1,0 +1,36 @@
+{
+  "name": "@produck/charon-browser",
+  "version": "0.0.1",
+  "description": "Doing small thing about browser api for compressing bundle by tree shaking",
+  "keywords": [
+    "charon",
+    "browswer",
+    "rollup"
+  ],
+  "author": "LiuQ-Q",
+  "contributors": [
+    "ChaosLee",
+    "LiuQ-Q"
+  ],
+  "homepage": "https://github.com/produck/charon/tree/main/packages/charon-browser#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "src",
+    "index.js",
+    "index.d.ts"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://192.168.50.222/root/charon.git"
+  },
+  "scripts": {
+		"lint": "eslint --fix ./**/*.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0"
+  }
+}

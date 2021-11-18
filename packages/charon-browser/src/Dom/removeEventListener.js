@@ -1,8 +1,4 @@
-/** @requires module:Type */
-
 /**
- * removeEventListener
- * @function
  * @param {HTMLElement} element
  * @param {string} event
  * @param {function} listener
