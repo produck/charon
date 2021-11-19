@@ -1,0 +1,1 @@
+export function dispatch(element: HTMLElement, event: Event): void;

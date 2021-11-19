@@ -1,0 +1,1 @@
+export function create(eventType: string, eventInitDict?: EventInit): Event;

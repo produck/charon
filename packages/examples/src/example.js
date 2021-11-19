@@ -1,18 +1,22 @@
 import * as $C from '@produck/charon';
 import * as $CB from '@produck/charon-browser';
 
-const btn = $CB.Dom.createElement('button');
-const btn2 = $CB.Dom.createElement('button');
-const btn3 = $CB.Dom.createElement('button');
+const [btn1, btn2, btn3, btn4, btn5, btn6] = [
+	'click me',
+	'remove click',
+	'timer',
+	'Dom',
+	'remove',
+	'event'
+].map(innerHTML => {
+	const btn = $CB.Dom.createElement('button');
 
-btn.innerHTML = 'Click me!';
-$CB.Dom.appendChild(document.body, btn);
+	btn.innerHTML = innerHTML;
 
-btn2.innerHTML = 'remove click'
-$CB.Dom.appendChild(document.body, btn2);
+	$CB.Dom.appendChild($CB.Dom.body, btn);
 
-btn3.innerHTML = 'timer'
-$CB.Dom.appendChild(document.body, btn3);
+	return btn
+});
 
 const listener = () => {
 	console.log('typeOf', $C.Lang.typeOf('string'), '-', $C.Lang.typeOf(null));
@@ -74,13 +78,13 @@ const listener = () => {
 	$C.Lang.Throw.TypeError('error3');
 };
 
-$CB.Dom.addEventListener(btn, 'click', listener);
+$CB.Dom.addEventListener(btn1, 'click', listener);
 
 $CB.Dom.addEventListener(btn2, 'click', () => {
 	$CB.Global.localStorage.setItem('test', 111);
 
 	$CB.Timer.Timeout(() => {
-		$CB.Dom.removeEventListener(btn, 'click', listener);
+		$CB.Dom.removeEventListener(btn1, 'click', listener);
 		console.log('remove success!');
 	}, 1000)
 });
@@ -106,4 +110,40 @@ $CB.Dom.addEventListener(btn3, 'click', () => {
 			console.log(timestamp);
 		});
 	}
+});
+
+$CB.Dom.addEventListener(btn4, 'click', () => {
+	$CB.Dom.appendChild($CB.Dom.body, $CB.Dom.createTextNode('TextNodeTextNode'));
+	$CB.Dom.setClassName(btn4, 'setClassName');
+	$CB.Dom.addClass(btn4, 'class1', 'class2');
+	console.log(
+		$CB.Dom.getClassList(btn4),
+		$CB.Dom.getRect(btn4),
+		$CB.Dom.createFragement()
+	);
+
+	$CB.Timer.Timeout(() => {
+		$CB.Dom.removeClass(btn4, 'setClassName', 'class1', 'class2');
+	}, 1000)
+});
+
+$CB.Dom.addEventListener(btn5, 'click', () => {
+	$CB.Dom.removeFromParent(btn2);
+
+	$CB.Timer.Timeout(() => {
+		$CB.Dom.removeChild($CB.Dom.body, btn1);
+	}, 1000)
+
+	$CB.Timer.Timeout(() => {
+		$CB.Dom.removeAllChild($CB.Dom.body);
+	}, 2000)
+});
+
+$CB.Dom.addEventListener(btn6, 'click', () => {
+	const ev = $CB.Event.create('look', { 'bubbles': true, 'cancelable': false });
+	$CB.Event.dispatch(btn6, ev);
+
+	console.log(
+		$CB.Event.stopAndPrevent
+	)
 });

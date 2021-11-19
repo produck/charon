@@ -1,4 +1,4 @@
-import { addEventListener } from '../addEventListener.js';
+import { addEventListener } from '../Dom/addEventListener.js';
 /**
  * @param {HTMLElement} element
  * @param {EventListenerOrEventListenerObject} listener

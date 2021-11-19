@@ -1,0 +1,1 @@
+export function stopAndPrevent(event: Event): void;

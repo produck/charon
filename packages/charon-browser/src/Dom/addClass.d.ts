@@ -1,0 +1,1 @@
+export function addClass(element: HTMLElement, ...token: Array<string>);

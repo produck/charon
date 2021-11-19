@@ -1,0 +1,1 @@
+export function removeAllChild(element: HTMLElement): Array<HTMLElement>;

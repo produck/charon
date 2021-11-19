@@ -1,9 +1,16 @@
-import * as Event from './Event';
-
-export { Event };
 export const body: HTMLElement;
 export const DOCUMENT: Document;
 export { addEventListener } from './addEventListener';
 export { removeEventListener } from './removeEventListener';
 export { createElement } from './createElement';
 export { appendChild } from './appendChild';
+export { removeChild } from './removeChild';
+export { removeAllChild } from './removeAllChild';
+export { removeFromParent } from './removeFromParent';
+export { createTextNode } from './createTextNode';
+export { setClassName } from './setClassName';
+export { getClassList } from './getClassList';
+export { addClass } from './addClass';
+export { removeClass } from './removeClass';
+export { getRect } from './getRect';
+export { createFragement } from './createFragement';

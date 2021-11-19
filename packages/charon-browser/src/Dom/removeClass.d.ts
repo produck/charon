@@ -1,0 +1,1 @@
+export function removeClass(element: HTMLElement, ...tokens: Array<string>): void;

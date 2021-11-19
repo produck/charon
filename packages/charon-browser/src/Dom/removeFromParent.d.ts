@@ -1,0 +1,1 @@
+export function removeFromParent(element: HTMLElement): HTMLElement;

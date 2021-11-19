@@ -1,0 +1,1 @@
+export function getRect(element: HTMLElement): DOMRect;
