@@ -1,0 +1,1 @@
+export function isNotRegExp(operand: any): boolean;

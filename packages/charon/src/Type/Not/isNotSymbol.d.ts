@@ -1,0 +1,1 @@
+export function isNotSymbol(operand: any): boolean;

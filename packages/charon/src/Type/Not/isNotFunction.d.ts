@@ -1,0 +1,1 @@
+export function isNotFunction(operand: any): boolean;

@@ -6,6 +6,4 @@ import { typeOfEquel } from '../../Lang/typeOfEquel.js';
  * @param {any} operand
  * @returns {boolean}
  */
-export const isNumber = (operand) => {
-	return typeOfEquel(operand, 'number');
-};
+export const isNumber = operand => typeOfEquel(operand, 'number');

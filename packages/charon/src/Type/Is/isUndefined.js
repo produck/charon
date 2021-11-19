@@ -4,6 +4,4 @@
  * @param {any} operand
  * @returns {boolean}
  */
-export const isUndefined = (operand) => {
-	return operand === undefined;
-};
+export const isUndefined = operand => operand === undefined;

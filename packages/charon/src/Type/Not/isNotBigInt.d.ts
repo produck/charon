@@ -1,0 +1,1 @@
+export function isNotBigInt(operand: any): boolean;

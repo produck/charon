@@ -1,0 +1,1 @@
+export function isBigInt(operand: any): boolean;

@@ -1,0 +1,1 @@
+export function isSymbol(operand: any): boolean;

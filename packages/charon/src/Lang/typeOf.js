@@ -4,6 +4,4 @@
  * @param {any} operand
  * @returns {string}
  */
-export const typeOf = (operand) => {
-	return typeof operand;
-};
+export const typeOf = operand => typeof operand;

@@ -8,6 +8,12 @@
  * @borrows isNull as isNull
  * @borrows isUndefined as isUndefined
  * @borrows isNaN as isNaN
+ * @borrows isFunction as isFunction
+ * @borrows isSymbol as isSymbol
+ * @borrows isBigInt as isBigInt
+ * @borrows isDate as isDate
+ * @borrows isRegExp as isRegExp
+ * @borrows isArrayBuffer as isArrayBuffer
  */
 
 import * as Is from './Is/index.js';
@@ -22,3 +28,9 @@ export { isObject } from './Is/isObject.js';
 export { isNull } from './Is/isNull.js';
 export { isUndefined } from './Is/isUndefined.js';
 export { isNaN } from './Is/isNaN.js';
+export { isFunction } from './Is/isFunction.js';
+export { isSymbol } from './Is/isSymbol.js';
+export { isBigInt } from './Is/isBigInt.js';
+export { isDate } from './Is/isDate.js';
+export { isRegExp } from './Is/isRegExp.js';
+export { isArrayBuffer } from './Is/isArrayBuffer.js';

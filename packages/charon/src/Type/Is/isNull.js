@@ -4,6 +4,4 @@
  * @param {any} operand
  * @returns {boolean}
  */
-export const isNull = (operand) => {
-	return operand === null;
-};
+export const isNull = operand => operand === null;

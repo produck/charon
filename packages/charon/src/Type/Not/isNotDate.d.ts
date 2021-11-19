@@ -1,0 +1,1 @@
+export function isNotDate(operand: any): boolean;

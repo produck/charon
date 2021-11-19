@@ -7,6 +7,4 @@ import { typeOf } from './typeOf.js';
  * @param {string} type
  * @returns {boolean}
  */
-export const typeOfEquel = (operand, type) => {
-	return typeOf(operand) === type;
-};
+export const typeOfEquel = (operand, type) => typeOf(operand) === type;

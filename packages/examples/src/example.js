@@ -26,7 +26,13 @@ const listener = () => {
 		'isObject', $C.Type.isObject({a: 1}), $C.Type.Is.Object({a: 1}),
 		'isNull', $C.Type.isNull(null), $C.Type.Is.Null(null),
 		'isUndefined', $C.Type.isUndefined(undefined), $C.Type.Is.Undefined(undefined),
-		'isNaN', $C.Type.isNaN(NaN), $C.Type.Is.NaN(NaN)
+		'isNaN', $C.Type.isNaN(NaN), $C.Type.Is.NaN(NaN),
+		'isFunction', $C.Type.isFunction(() => {}), $C.Type.Is.Function(() => {}),
+		'isSymbol', $C.Type.isSymbol(Symbol()), $C.Type.Is.Symbol(Symbol()),
+		'isBigInt', $C.Type.isBigInt(BigInt(10)), $C.Type.Is.BigInt(BigInt(10)),
+		'isDate', $C.Type.isDate(new Date()), $C.Type.Is.Date(new Date()),
+		'isRegExp', $C.Type.isRegExp(new RegExp()), $C.Type.Is.RegExp(new RegExp()),
+		'isArrayBuffer', $C.Type.isArrayBuffer(new ArrayBuffer()), $C.Type.Is.ArrayBuffer(new ArrayBuffer())
 	);
 	console.log(
 		'isNotString', $C.Type.Not.String('aaa'),
@@ -36,7 +42,13 @@ const listener = () => {
 		'isNotObject', $C.Type.Not.Object({a: 1}),
 		'isNotNull', $C.Type.Not.Null(null),
 		'isNotUndefined', $C.Type.Not.Undefined(undefined),
-		'isNotNaN', $C.Type.Not.NaN(NaN)
+		'isNotNaN', $C.Type.Not.NaN(NaN),
+		'isNotFunction', $C.Type.Not.Function(() => {}),
+		'isNotSymbol', $C.Type.Not.Symbol(Symbol()),
+		'isNotBigInt', $C.Type.Not.BigInt(BigInt(10)),
+		'isNotDate', $C.Type.Not.Date(new Date()),
+		'isNotRegExp', $C.Type.Not.RegExp(new RegExp()),
+		'isNotArrayBuffer', $C.Type.Not.ArrayBuffer(new ArrayBuffer())
 	);
 	console.log(
 		'abs', $C.Math.abs(-1),

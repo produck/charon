@@ -6,6 +6,4 @@ import { typeOfEquel } from '../../Lang/typeOfEquel.js';
  * @param {any} operand
  * @returns {boolean}
  */
-export const isBoolean = (operand) => {
-	return typeOfEquel(operand, 'boolean');
-};
+export const isBoolean = operand => typeOfEquel(operand, 'boolean');

@@ -1,0 +1,1 @@
+export function isArrayBuffer(operand: any): boolean;
