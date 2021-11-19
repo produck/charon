@@ -1,4 +1,4 @@
-import { DOCUMENT } from '../constant.js';
+import { DOCUMENT } from './constant.js';
 
 /**
  * @param {string} tagName

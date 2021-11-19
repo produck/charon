@@ -64,6 +64,11 @@ const listener = () => {
 		'has', $C.Reflect.has({}, 1),
 		'ownKeys', $C.Reflect.ownKeys({ a: 1, b: 2 })
 	)
+	console.log(
+		'navigator', $CB.Global.navigator,
+		'history', $CB.Global.history,
+		'location', $CB.Global.location
+	)
 	$C.Lang.throwError('error1');
 	$C.Lang.Throw.TypeError('error2');
 	$C.Lang.Throw.TypeError('error3');

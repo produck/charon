@@ -1,7 +1,8 @@
+import { addEventListener } from '../addEventListener.js';
 /**
  * @param {HTMLElement} element
- * @param {function} listener
+ * @param {EventListenerOrEventListenerObject} listener
  */
 export const addClickEvent = (element, listener) => {
-	element.addEventListener('click', listener);
+	addEventListener(element, 'click', listener);
 };

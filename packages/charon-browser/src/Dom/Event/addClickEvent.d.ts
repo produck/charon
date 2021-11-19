@@ -4,4 +4,4 @@
  * @param element - EventTarget
  * @param listener - callback
  */
-export function addClickEvent(element: HTMLElement, listener: () => void): void;
+export function addClickEvent(element: HTMLElement, listener: EventListenerOrEventListenerObject): void;
