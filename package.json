@@ -5,7 +5,10 @@
   "scripts": {
     "build:doc": "rm -rf ./docs && jsdoc -c ./.jsdoc.json --verbose",
     "deps:install": "npm install && lerna bootstrap",
-    "deps:clean": "lerna clean -y"
+    "deps:clean": "lerna clean -y",
+		"git:all": "git log --pretty=tformat: --numstat . \":(exclude)*-lock*\"",
+		"git:calc": "awk '{a+=$1;s+=$2;l+=$1-$2}END{printf \"+%s -%s =%s\",a,s,l}'",
+		"git:lines": "npm run git:all | npm run git:calc"
   },
   "repository": {
     "type": "git",
