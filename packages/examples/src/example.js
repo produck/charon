@@ -73,6 +73,8 @@ const listener = () => {
 		'history', $CB.Global.history,
 		'location', $CB.Global.location
 	)
+	console.log('noop',$C.noop)
+
 	$C.Lang.throwError('error1');
 	$C.Lang.Throw.TypeError('error2');
 	$C.Lang.Throw.TypeError('error3');
@@ -139,11 +141,19 @@ $CB.Dom.addEventListener(btn5, 'click', () => {
 	}, 2000)
 });
 
-$CB.Dom.addEventListener(btn6, 'click', () => {
-	const ev = $CB.Event.create('look', { 'bubbles': true, 'cancelable': false });
-	$CB.Event.dispatch(btn6, ev);
+// Event
+const ev = $CB.Event.create('look', { 'bubbles': true, 'cancelable': false });
 
-	console.log(
-		$CB.Event.stopAndPrevent
-	)
+$CB.Dom.addEventListener(btn5, 'look', () => {
+	btn5.innerHTML = 'look5'
+})
+
+$CB.Dom.addEventListener($CB.Dom.DOCUMENT, 'look', () => {
+	console.log('document look')
+})
+
+$CB.Dom.addEventListener(btn6, 'click', () => {
+	$CB.Event.dispatch(btn5, ev);
+
+	$CB.Event.stopAndPrevent(ev)
 });
