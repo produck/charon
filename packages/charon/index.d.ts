@@ -5,5 +5,4 @@ import Object from './src/Object';
 import Reflect from './src/Reflect';
 
 export { Lang, Type, Math, Object, Reflect };
-
-export function noop(): void;
+export function NOOP(): void;

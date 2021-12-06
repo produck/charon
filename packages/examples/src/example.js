@@ -73,7 +73,7 @@ const listener = () => {
 		'history', $CB.Global.history,
 		'location', $CB.Global.location
 	)
-	console.log('noop',$C.noop)
+	console.log('noop',$C.NOOP)
 
 	$C.Lang.throwError('error1');
 	$C.Lang.Throw.TypeError('error2');
