@@ -1,6 +1,6 @@
 {
   "name": "examples",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "private": true,
   "description": "examples for charon",
   "author": "LiuQ-Q",
@@ -19,7 +19,7 @@
     "build-rollup": "rm -rf ./dist/rollup && rollup --config script/rollup.config.js"
   },
   "devDependencies": {
-    "@produck/charon": "^0.1.6",
+    "@produck/charon": "^0.1.7",
     "@produck/charon-browser": "^0.1.0",
     "@rollup/plugin-html": "^0.2.4",
     "@rollup/plugin-node-resolve": "^13.0.6",
