@@ -1,6 +1,6 @@
 {
   "name": "@produck/charon-browser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Doing small thing about browser api for compressing bundle by tree shaking",
   "keywords": [
     "charon",
@@ -15,7 +15,7 @@
   "homepage": "https://github.com/produck/charon/tree/main/packages/charon-browser#readme",
   "license": "MIT",
   "main": "index.js",
-	"types": "index.d.ts",
+  "types": "index.d.ts",
   "files": [
     "src",
     "index.js",

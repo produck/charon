@@ -1,6 +1,6 @@
 {
   "name": "@produck/charon-events",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "event",
   "keywords": [
     "EventEmitter"
@@ -11,10 +11,10 @@
   "main": "index.js",
   "files": [
     "index.js",
-		"index.d.ts",
-		"src"
+    "index.d.ts",
+    "src"
   ],
-	"types": "index.d.ts",
+  "types": "index.d.ts",
   "publishConfig": {
     "access": "public"
   },
