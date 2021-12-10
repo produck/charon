@@ -1,13 +1,17 @@
 import * as $C from '@produck/charon';
 import * as $CB from '@produck/charon-browser';
+import * as $E from '@produck/charon-event';
 
-const [btn1, btn2, btn3, btn4, btn5, btn6] = [
+const [btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9] = [
 	'click me',
 	'remove click',
 	'timer',
 	'Dom',
 	'remove',
-	'event'
+	'event',
+	'emitterOn',
+	'emitterEmit',
+	'emitterOff'
 ].map(innerHTML => {
 	const btn = $CB.Dom.createElement('button');
 
@@ -164,4 +168,23 @@ $CB.Dom.addEventListener(btn6, 'click', () => {
 	$CB.Event.dispatch(btn5, ev);
 
 	$CB.Event.stopAndPrevent(ev)
+});
+
+// Event Emitter
+const emitter = new $E.Simple();
+
+const emitterListener = () => {
+	$CB.Global.Console.log('success!');
+}
+
+$CB.Dom.addEventListener(btn7, 'click', () => {
+	emitter.on('test', emitterListener);
+});
+
+$CB.Dom.addEventListener(btn8, 'click', () => {
+	emitter.emit('test');
+});
+
+$CB.Dom.addEventListener(btn9, 'click', () => {
+	emitter.off('test', emitterListener);
 });

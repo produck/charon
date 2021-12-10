@@ -1,0 +1,1 @@
+export { SimpleEventEmitter as Simple } from './src/Simple';

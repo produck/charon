@@ -1,0 +1,28 @@
+{
+  "name": "@produck/charon-events",
+  "version": "0.0.0",
+  "description": "event",
+  "keywords": [
+    "EventEmitter"
+  ],
+  "author": "LiuQ-Q",
+  "homepage": "https://github.com/produck/charon/tree/main/packages/charon-event#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js",
+		"index.d.ts",
+		"src"
+  ],
+	"types": "index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/produck/charon.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}

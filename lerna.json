@@ -2,7 +2,8 @@
   "packages": [
     "packages/charon",
 		"packages/charon-browser",
-    "packages/examples"
+    "packages/examples",
+    "packages/charon-events"
   ],
   "version": "independent"
 }
