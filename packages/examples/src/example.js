@@ -19,10 +19,10 @@ const [btn1, btn2, btn3, btn4, btn5, btn6] = [
 });
 
 const listener = () => {
-	console.log('typeOf', $C.Lang.typeOf('string'), '-', $C.Lang.typeOf(null));
-	console.log('typeOfEquel', $C.Lang.typeOfEquel(123, 'number'));
-	console.log('instanceOf', $C.Lang.instanceOf([1, 2], Array));
-	console.log(
+	$CB.Global.Console.log('typeOf', $C.Lang.typeOf('string'), '-', $C.Lang.typeOf(null));
+	$CB.Global.Console.log('typeOfEquel', $C.Lang.typeOfEquel(123, 'number'));
+	$CB.Global.Console.log('instanceOf', $C.Lang.instanceOf([1, 2], Array));
+	$CB.Global.Console.log(
 		'isString', $C.Type.isString('aaa'), $C.Type.Is.String('aaa'),
 		'isBoolean', $C.Type.isBoolean(true), $C.Type.Is.Boolean(true),
 		'isArray', $C.Type.isArray([1]), $C.Type.Is.Array([1]),
@@ -38,7 +38,7 @@ const listener = () => {
 		'isRegExp', $C.Type.isRegExp(new RegExp()), $C.Type.Is.RegExp(new RegExp()),
 		'isArrayBuffer', $C.Type.isArrayBuffer(new ArrayBuffer()), $C.Type.Is.ArrayBuffer(new ArrayBuffer())
 	);
-	console.log(
+	$CB.Global.Console.log(
 		'isNotString', $C.Type.Not.String('aaa'),
 		'isNotBoolean', $C.Type.Not.Boolean(true),
 		'isNotArray', $C.Type.Not.Array([1]),
@@ -54,26 +54,34 @@ const listener = () => {
 		'isNotRegExp', $C.Type.Not.RegExp(new RegExp()),
 		'isNotArrayBuffer', $C.Type.Not.ArrayBuffer(new ArrayBuffer())
 	);
-	console.log(
+	$CB.Global.Console.log(
 		'abs', $C.Math.abs(-1),
 		'sin', $C.Math.sin(10),
 		'sqrt', $C.Math.sqrt(2),
 		'random', $C.Math.random()
 	);
-	console.log(
+	$CB.Global.Console.log(
 		'values', $C.Object.values({ a: 1, b: 2 }),
 		'assign', $C.Object.assign({}, {})
 	);
-	console.log(
+	$CB.Global.Console.log(
 		'has', $C.Reflect.has({}, 1),
 		'ownKeys', $C.Reflect.ownKeys({ a: 1, b: 2 })
 	)
-	console.log(
+	$CB.Global.Console.log(
 		'navigator', $CB.Global.navigator,
 		'history', $CB.Global.history,
 		'location', $CB.Global.location
 	)
-	console.log('noop',$C.NOOP)
+	$CB.Global.Console.log('noop',$C.NOOP)
+
+	$CB.Global.Console.log($C.Math.atan2xy(100, 200));
+	$CB.Global.Console.log($C.Math.atan2xy(200, 300));
+
+	$CB.Global.Console.warn('warn1');
+	$CB.Global.Console.warn('warn2');
+	$CB.Global.Console.error('error1');
+	$CB.Global.Console.error('error2');
 
 	$C.Lang.throwError('error1');
 	$C.Lang.Throw.TypeError('error2');
@@ -87,7 +95,7 @@ $CB.Dom.addEventListener(btn2, 'click', () => {
 
 	$CB.Timer.Timeout(() => {
 		$CB.Dom.removeEventListener(btn1, 'click', listener);
-		console.log('remove success!');
+		$CB.Global.Console.log('remove success!');
 	}, 1000)
 });
 
@@ -100,7 +108,7 @@ $CB.Dom.addEventListener(btn3, 'click', () => {
 		interval = null;
 	} else {
 		interval = $CB.Timer.Interval(() => {
-			console.log(interval);
+			$CB.Global.Console.log(interval);
 		}, 1000);
 	}
 
@@ -109,7 +117,7 @@ $CB.Dom.addEventListener(btn3, 'click', () => {
 		request = null;
 	} else {
 		request = $CB.Timer.AnimationFrame((timestamp) => {
-			console.log(timestamp);
+			$CB.Global.Console.log(timestamp);
 		});
 	}
 });
@@ -118,7 +126,7 @@ $CB.Dom.addEventListener(btn4, 'click', () => {
 	$CB.Dom.appendChild($CB.Dom.body, $CB.Dom.createTextNode('TextNodeTextNode'));
 	$CB.Dom.setClassName(btn4, 'setClassName');
 	$CB.Dom.addClass(btn4, 'class1', 'class2');
-	console.log(
+	$CB.Global.Console.log(
 		$CB.Dom.getClassList(btn4),
 		$CB.Dom.getRect(btn4),
 		$CB.Dom.createFragement()
@@ -149,7 +157,7 @@ $CB.Dom.addEventListener(btn5, 'look', () => {
 })
 
 $CB.Dom.addEventListener($CB.Dom.DOCUMENT, 'look', () => {
-	console.log('document look')
+	$CB.Global.Console.log('document look')
 })
 
 $CB.Dom.addEventListener(btn6, 'click', () => {

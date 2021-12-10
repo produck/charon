@@ -44,3 +44,5 @@ export const sqrt = MATH.sqrt;
 export const tan = MATH.tan;
 export const tanh = MATH.tanh;
 export const trunc = MATH.trunc;
+
+export const atan2xy = (x, y) => atan2(y, x);
