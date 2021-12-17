@@ -1,1 +1,1 @@
-export { SimpleEventEmitter as Simple } from './src/Simple';
+export * as Simple from './src/Simple';

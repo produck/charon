@@ -21,7 +21,7 @@
   "devDependencies": {
     "@produck/charon": "^0.1.8",
     "@produck/charon-browser": "^0.1.1",
-    "@produck/charon-event": "^0.0.0",
+    "@produck/charon-events": "^0.1.0",
     "@rollup/plugin-html": "^0.2.4",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "rollup": "^2.60.0",

@@ -2,7 +2,7 @@ const
 	EVENT_LISTENER_MAP = 'e',
 	CONTEXT = 'c';
 
-export class SimpleEventEmitter {
+class SimpleEventEmitter {
 	constructor(context = undefined) {
 		/**
 		 * @type {{ [key: string]: Array<() => void> }}
@@ -40,3 +40,14 @@ export class SimpleEventEmitter {
 		}
 	};
 }
+
+/**
+ * @param {SimpleEventEmitter} emitter
+ * @returns
+ */
+export const destroy = emitter => {
+	emitter[EVENT_LISTENER_MAP] = null;
+	emitter[CONTEXT] = null;
+};
+
+export const Emitter = SimpleEventEmitter;

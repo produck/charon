@@ -1,6 +1,6 @@
 import * as $C from '@produck/charon';
 import * as $CB from '@produck/charon-browser';
-import * as $E from '@produck/charon-event';
+import * as $E from '@produck/charon-events';
 
 const [btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9] = [
 	'click me',
@@ -171,7 +171,7 @@ $CB.Dom.addEventListener(btn6, 'click', () => {
 });
 
 // Event Emitter
-const emitter = new $E.Simple();
+const emitter = new $E.Simple.Emitter();
 
 const emitterListener = () => {
 	$CB.Global.Console.log('success!');
