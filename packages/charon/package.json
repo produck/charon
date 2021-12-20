@@ -1,41 +1,41 @@
 {
-  "name": "@produck/charon",
-  "version": "0.1.8",
-  "description": "Doing small thing for compressing bundle by tree shaking",
-  "files": [
-    "index.js",
-    "index.d.ts",
-    "src"
-  ],
-  "keywords": [
-    "charon",
-    "rollup",
-    "webpack"
-  ],
-  "author": "LiuQ-Q",
-  "contributors": [
-    "ChaosLee",
-    "LiuQ-Q"
-  ],
-  "homepage": "https://github.com/produck/charon/tree/main/packages/charon#readme",
-  "license": "MIT",
-  "main": "index.js",
-  "type": "module",
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/produck/charon.git"
-  },
-  "scripts": {
-    "lint": "eslint --fix ./**/*.js",
-    "prepublish": "npm run lint"
-  },
-  "bugs": {
-    "url": "https://github.com/produck/charon/issues"
-  },
-  "devDependencies": {
-    "eslint": "^8.2.0"
-  }
+	"name": "@produck/charon",
+	"version": "0.1.8",
+	"description": "Doing small thing for compressing bundle by tree shaking",
+	"files": [
+		"index.js",
+		"index.d.ts",
+		"src"
+	],
+	"keywords": [
+		"charon",
+		"rollup",
+		"webpack"
+	],
+	"author": "LiuQ-Q",
+	"contributors": [
+		"ChaosLee",
+		"LiuQ-Q"
+	],
+	"homepage": "https://github.com/produck/charon/tree/main/packages/charon#readme",
+	"license": "MIT",
+	"main": "index.js",
+	"type": "module",
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/produck/charon.git"
+	},
+	"scripts": {
+		"lint": "eslint --fix ./**/*.js",
+		"prepublish": "npm run lint"
+	},
+	"bugs": {
+		"url": "https://github.com/produck/charon/issues"
+	},
+	"devDependencies": {
+		"eslint": "^8.5.0"
+	}
 }

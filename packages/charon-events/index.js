@@ -1,1 +1,3 @@
-export * as Simple from './src/Simple.js';
+import * as Simple from './src/Simple.js';
+
+export { Simple };

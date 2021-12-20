@@ -18,7 +18,7 @@ class SimpleEventEmitter {
 		}
 
 		this[EVENT_LISTENER_MAP][type].push(listener);
-	};
+	}
 
 	off(type, listener) {
 		const list = this[EVENT_LISTENER_MAP][type];
@@ -30,7 +30,7 @@ class SimpleEventEmitter {
 				list.splice(index, 1);
 			}
 		}
-	};
+	}
 
 	emit(type, ...args) {
 		if (this[EVENT_LISTENER_MAP][type]) {
@@ -38,7 +38,7 @@ class SimpleEventEmitter {
 				listener.call(this[CONTEXT], ...args);
 			}
 		}
-	};
+	}
 }
 
 /**
