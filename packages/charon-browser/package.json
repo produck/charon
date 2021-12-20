@@ -1,6 +1,6 @@
 {
 	"name": "@produck/charon-browser",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Doing small thing about browser api for compressing bundle by tree shaking",
 	"keywords": [
 		"charon",
