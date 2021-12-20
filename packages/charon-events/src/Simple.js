@@ -3,7 +3,7 @@ const
 	CONTEXT = 'c';
 
 class SimpleEventEmitter {
-	constructor(context = undefined) {
+	constructor(context = this) {
 		/**
 		 * @type {{ [key: string]: Array<() => void> }}
 		 */
