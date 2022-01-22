@@ -7,9 +7,9 @@ const _ = getter => map.get(getter);
 class BaseAccessor {}
 
 export const define = (
-	constructor = Object,
 	descriptor,
-	children = {}
+	children = {},
+	constructor = Object
 ) => {
 	const finalDescriptor = Property.normalize(descriptor);
 

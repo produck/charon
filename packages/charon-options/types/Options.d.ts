@@ -20,24 +20,23 @@ interface AccessorConstructor<
 }
 
 interface PropertyDescriptorObject<
-	Context = any,
 	Value = any,
 > {
-	value?: Value;
-	set?(newValue?: Value, oldValue?: Value, context?: Context): void;
-	validate?(value?: Value, context?: Context): boolean;
+	value: Value;
+	set?(newValue?: Value, oldValue?: Value, context?: any): void;
+	validate?(value?: Value, context?: any): boolean;
+	[key: string]: any;
 }
 
-type PropertyDescriptor<T extends object> = T extends object
-	? PropertyDescriptorObject<any, number>
-	: number | boolean | string;
+type SimpleProperty = number | boolean | string | symbol;
+type PropertyDescriptor = PropertyDescriptorObject | SimpleProperty;
+
+interface BaseDescriptor {
+	[key: string]: PropertyDescriptor;
+}
 
 interface AccessorConstructorMap {
 	[key: string]: AccessorConstructor;
-}
-
-interface BaseDescriptor {
-	[key: string]: PropertyDescriptor<any>;
 }
 
 type MixinedAccessor<
@@ -46,17 +45,17 @@ type MixinedAccessor<
 	ChildrenAccessorConstructorMap extends AccessorConstructorMap = AccessorConstructorMap
 > = BaseAccessor & {
 	[SelfProperty in keyof Descriptor]:
-		Descriptor[SelfProperty] extends PropertyDescriptorObject<Context, infer R>
+		Descriptor[SelfProperty] extends PropertyDescriptorObject<infer R>
 			? R : Descriptor[SelfProperty]
 } & {
-	[ChildProperty in keyof ChildrenAccessorConstructorMap]: boolean;
+	[ChildProperty in keyof ChildrenAccessorConstructorMap]:
+		InstanceType<ChildrenAccessorConstructorMap[ChildProperty]>;
 }
 
 export function define<
 	CustomDescriptor extends BaseDescriptor = BaseDescriptor,
 	ChildrenAccessorConstructorMap extends AccessorConstructorMap = AccessorConstructorMap
 >(
-	constructor: any,
-	descriptor: CustomDescriptor,
-	children: ChildrenAccessorConstructorMap
+	descriptor?: CustomDescriptor,
+	children?: ChildrenAccessorConstructorMap
 ): AccessorConstructor<CustomDescriptor, ChildrenAccessorConstructorMap>;
