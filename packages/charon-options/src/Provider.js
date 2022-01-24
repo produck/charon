@@ -1,4 +1,4 @@
-import { Object, Lang } from '@produck/charon';
+import { Object, Lang, Console } from '@produck/charon';
 import * as Property from './Property.js';
 
 const map = new WeakMap();
@@ -6,24 +6,29 @@ const _ = getter => map.get(getter);
 
 class BaseAccessor {}
 
-export const define = (
-	descriptor,
-	children = {},
-	constructor = Object
-) => {
+export const define = (descriptor, childAccessorMap = {}) => {
 	const finalDescriptor = Property.normalize(descriptor);
 
+	function Raw() {
+		const raw = {};
+
+		for (const name in finalDescriptor) {
+			raw[name] = finalDescriptor[name].value;
+		}
+
+		return raw;
+	}
+
 	class CustomAccessor extends BaseAccessor {
-		constructor(options, context) {
+		constructor(context) {
 			super();
 
-			map.set(this, options);
+			map.set(this, { raw: Raw(), context });
 
-			for (const name in children) {
-				this[name] = new children[name](options[name]);
+			for (const name in childAccessorMap) {
+				this[name] = new childAccessorMap[name](context);
 			}
 
-			this.$context = context;
 			Object.freeze(this);
 		}
 
@@ -34,41 +39,31 @@ export const define = (
 
 			for (const name in source) {
 				if (name in finalDescriptor) {
-					this[name] = source[name];
-				} else if (name in children) {
-					this[name].merge(source[name]);
+					accessor[name] = source[name];
+				} else if (name in childAccessorMap) {
+					childAccessorMap[name].merge(accessor[name], source[name]);
 				} else {
-					console.warn(`No such a property name='${name}' in source.`);
+					Console.warn(`No such a property name='${name}' in source.`);
 				}
 			}
-		}
-
-		static Raw() {
-			const raw = {};
-
-			for (const name in finalDescriptor) {
-				raw[name] = finalDescriptor[name].value;
-			}
-
-			for (const name in children) {
-				raw[name] = children[name].Raw();
-			}
-
-			return raw;
 		}
 	}
 
 	for (const propertyName in finalDescriptor) {
 		Object.defineProperty(CustomAccessor.prototype, propertyName, {
 			get() {
-				return _(this)[propertyName];
+				return _(this).raw[propertyName];
 			},
 			set(newValue) {
+				const { raw, context } = _(this);
 				const oldValue = this[propertyName];
 
 				if (newValue !== oldValue) {
-					_(this)[propertyName] = newValue;
-					finalDescriptor[propertyName].set(newValue, oldValue, this.$context);
+					const { set, validate } = finalDescriptor[propertyName];
+
+					validate.call(context, newValue);
+					raw[propertyName] = newValue;
+					set.call(context, newValue, oldValue);
 				}
 			}
 		});

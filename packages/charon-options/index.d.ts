@@ -1,0 +1,1 @@
+export { define } from './types/Options';

@@ -7,24 +7,21 @@ interface AccessorConstructor<
 	new <
 		Context = any
 	>(
-		raw: object,
 		context: Context
-	): MixinedAccessor<Context, Descriptor, ChildrenAccessorConstructorMap>;
-
-	Raw(): object;
+	): MixinedAccessor<Descriptor, ChildrenAccessorConstructorMap>;
 
 	merge(
-		accessor: MixinedAccessor<any, Descriptor, ChildrenAccessorConstructorMap>,
+		accessor: MixinedAccessor<Descriptor, ChildrenAccessorConstructorMap>,
 		options: object
 	): void;
 }
 
 interface PropertyDescriptorObject<
-	Value = any,
+	Value = any
 > {
 	value: Value;
-	set?(newValue?: Value, oldValue?: Value, context?: any): void;
-	validate?(value?: Value, context?: any): boolean;
+	set?(newValue?: any, oldValue?: any): any;
+	validate?(value?: any): any;
 	[key: string]: any;
 }
 
@@ -40,7 +37,6 @@ interface AccessorConstructorMap {
 }
 
 type MixinedAccessor<
-	Context = any,
 	Descriptor extends BaseDescriptor = BaseDescriptor,
 	ChildrenAccessorConstructorMap extends AccessorConstructorMap = AccessorConstructorMap
 > = BaseAccessor & {
