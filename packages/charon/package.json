@@ -1,6 +1,6 @@
 {
 	"name": "@produck/charon",
-	"version": "0.1.9",
+	"version": "0.2.0",
 	"description": "Doing small thing for compressing bundle by tree shaking",
 	"files": [
 		"index.js",
