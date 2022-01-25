@@ -14,7 +14,8 @@
 	"files": [
 		"index.js",
 		"index.d.ts",
-		"src"
+		"src",
+		"types"
 	],
 	"type": "module",
 	"types": "index.d.ts",

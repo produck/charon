@@ -6,7 +6,7 @@ const _ = getter => map.get(getter);
 
 class BaseAccessor {}
 
-export const define = (descriptor, childAccessorMap = {}) => {
+export const define = (descriptor = {}, childAccessorMap = {}) => {
 	const finalDescriptor = Property.normalize(descriptor);
 
 	function Raw() {
