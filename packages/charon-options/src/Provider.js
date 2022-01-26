@@ -2,12 +2,23 @@ import { Object, Lang, Console } from '@produck/charon';
 import * as Property from './Property.js';
 
 const map = new WeakMap();
+const constructorSet = new WeakSet();
 const _ = getter => map.get(getter);
 
 class BaseAccessor {}
 
+const assertAccessorConstructor = (any, name) => {
+	if (!constructorSet.has(any)) {
+		Lang.throwError(`Invalid child Accessor name="${name}".`);
+	}
+};
+
 export const define = (descriptor = {}, childAccessorMap = {}) => {
 	const finalDescriptor = Property.normalize(descriptor);
+
+	for (const name in childAccessorMap) {
+		assertAccessorConstructor(childAccessorMap[name], name);
+	}
 
 	function Raw() {
 		const raw = {};
@@ -32,6 +43,15 @@ export const define = (descriptor = {}, childAccessorMap = {}) => {
 			Object.freeze(this);
 		}
 
+		static appendChild(name, ChildAccessor) {
+			if (childAccessorMap[name]) {
+				Lang.throwError('Conflict child accessor property name.');
+			}
+
+			assertAccessorConstructor(ChildAccessor, name);
+			childAccessorMap[name] = ChildAccessor;
+		}
+
 		static merge(accessor, source) {
 			if (!Lang.instanceOf(accessor, CustomAccessor)) {
 				Lang.Throw.TypeError('Invalid accessor.');
@@ -48,6 +68,8 @@ export const define = (descriptor = {}, childAccessorMap = {}) => {
 			}
 		}
 	}
+
+	constructorSet.add(CustomAccessor);
 
 	for (const propertyName in finalDescriptor) {
 		Object.defineProperty(CustomAccessor.prototype, propertyName, {

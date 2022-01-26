@@ -1,6 +1,6 @@
 interface BaseAccessor {}
 
-interface AccessorConstructor<
+export interface AccessorConstructor<
 	Descriptor extends BaseDescriptor = {},
 	ChildrenAccessorConstructorMap extends AccessorConstructorMap = {},
 > {
@@ -9,6 +9,8 @@ interface AccessorConstructor<
 	>(
 		context: Context
 	): MixinedAccessor<Descriptor, ChildrenAccessorConstructorMap>;
+
+	appendChild(name: string, ChildAccessor: AccessorConstructor): void;
 
 	merge(
 		accessor: MixinedAccessor<Descriptor, ChildrenAccessorConstructorMap>,
@@ -37,8 +39,8 @@ interface AccessorConstructorMap {
 }
 
 type MixinedAccessor<
-	Descriptor extends BaseDescriptor = BaseDescriptor,
-	ChildrenAccessorConstructorMap extends AccessorConstructorMap = AccessorConstructorMap
+	Descriptor extends BaseDescriptor = {},
+	ChildrenAccessorConstructorMap extends AccessorConstructorMap = {}
 > = BaseAccessor & {
 	[SelfProperty in keyof Descriptor]:
 		Descriptor[SelfProperty] extends PropertyDescriptorObject<infer R>
@@ -48,10 +50,16 @@ type MixinedAccessor<
 		InstanceType<ChildrenAccessorConstructorMap[ChildProperty]>;
 }
 
-export function define<
-	CustomDescriptor extends BaseDescriptor = BaseDescriptor,
-	ChildrenAccessorConstructorMap extends AccessorConstructorMap = AccessorConstructorMap
->(
-	descriptor?: CustomDescriptor,
-	children?: ChildrenAccessorConstructorMap
-): AccessorConstructor<CustomDescriptor, ChildrenAccessorConstructorMap>;
+export interface OptionsConstructorProvider<
+	Context = any
+> {
+	<
+		CustomDescriptor extends BaseDescriptor = {},
+		ChildrenAccessorConstructorMap extends AccessorConstructorMap = {}
+	> (
+		descriptor?: CustomDescriptor,
+		children?: ChildrenAccessorConstructorMap
+	): AccessorConstructor<CustomDescriptor, ChildrenAccessorConstructorMap>;
+}
+
+export const define: OptionsConstructorProvider;
