@@ -1,4 +1,4 @@
-import { Object, Lang, Console } from '@produck/charon';
+import { Object, Lang, Console, NOOP } from '@produck/charon';
 import * as Property from './Property.js';
 
 const map = new WeakMap();
@@ -13,7 +13,7 @@ const assertAccessorConstructor = (any, name) => {
 	}
 };
 
-export const define = (descriptor = {}, childAccessorMap = {}) => {
+export const define = (descriptor = {}, childAccessorMap = {}, eachSet = NOOP) => {
 	const finalDescriptor = Property.normalize(descriptor);
 
 	for (const name in childAccessorMap) {
@@ -73,6 +73,7 @@ export const define = (descriptor = {}, childAccessorMap = {}) => {
 
 	for (const propertyName in finalDescriptor) {
 		Object.defineProperty(CustomAccessor.prototype, propertyName, {
+			enumerable: true,
 			get() {
 				return _(this).raw[propertyName];
 			},
@@ -86,6 +87,7 @@ export const define = (descriptor = {}, childAccessorMap = {}) => {
 					validate.call(context, newValue);
 					raw[propertyName] = newValue;
 					set.call(context, newValue, oldValue);
+					eachSet.call(context);
 				}
 			}
 		});
