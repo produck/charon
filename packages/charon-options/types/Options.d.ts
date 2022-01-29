@@ -1,50 +1,53 @@
-interface BaseAccessor {}
+interface Accessor {}
 
-export interface AccessorConstructor<
-	Descriptor extends BaseDescriptor = {},
-	ChildrenAccessorConstructorMap extends AccessorConstructorMap = {},
-> {
-	new <
-		Context = any
-	>(
-		context: Context
-	): MixinedAccessor<Descriptor, ChildrenAccessorConstructorMap>;
-
-	appendChild(name: string, ChildAccessor: AccessorConstructor): void;
-
-	merge(
-		accessor: MixinedAccessor<Descriptor, ChildrenAccessorConstructorMap>,
-		options: object
-	): void;
-}
-
-interface PropertyDescriptorObject<
-	Value = any
-> {
+interface PropertyDescriptorObject<Value = any> {
 	value: Value;
 	set?(newValue?: any, oldValue?: any): any;
-	validate?(value?: any): any;
+	validate?: (value: Value) => any;
 	[key: string]: any;
 }
 
-type SimpleProperty = number | boolean | string | symbol;
-type PropertyDescriptor = PropertyDescriptorObject | SimpleProperty;
+type ThisTypedPropertyDescriptorObject<Context = any> = PropertyDescriptorObject & ThisType<Context>;
+type SimplePropertyDescriptor = number | boolean | string | symbol | null | Function;
+type SimpleType<T> = T extends boolean ? boolean : T;
 
-interface BaseDescriptor {
-	[key: string]: PropertyDescriptor;
+interface PropertyDescriptorMap<Context = any> {
+	[propertyName: string]: ThisTypedPropertyDescriptorObject<Context> | SimplePropertyDescriptor;
+}
+
+type ThisTypedPropertyDescriptorMap<
+	Context = any,
+	CustomPropertyDescriptorMap extends PropertyDescriptorMap<Context> = {},
+> = CustomPropertyDescriptorMap & ThisType<Context>;
+
+interface AccessorConstructor<
+	Context = any,
+	CustomPropertyDescriptorMap extends PropertyDescriptorMap<Context> = {},
+	ChildrenAccessorConstructorMap extends AccessorConstructorMap = {},
+> {
+	new (context: Context): MixinedAccessor<CustomPropertyDescriptorMap, ChildrenAccessorConstructorMap>;
+
+	appendChild(name: string, ChildAccessor: AccessorConstructor): void;
+
+	merge<
+		CustomAccessor = MixinedAccessor<CustomPropertyDescriptorMap, ChildrenAccessorConstructorMap>
+	>(
+		accessor: CustomAccessor,
+		options: CustomAccessor
+	): void;
 }
 
 interface AccessorConstructorMap {
-	[key: string]: AccessorConstructor;
+	[propertyName: string]: AccessorConstructor
 }
 
 type MixinedAccessor<
-	Descriptor extends BaseDescriptor = {},
+	CustomPropertyDescriptorMap extends PropertyDescriptorMap = {},
 	ChildrenAccessorConstructorMap extends AccessorConstructorMap = {}
-> = BaseAccessor & {
-	[SelfProperty in keyof Descriptor]:
-		Descriptor[SelfProperty] extends PropertyDescriptorObject<infer R>
-			? R : Descriptor[SelfProperty]
+> = Accessor & {
+	[SelfProperty in keyof CustomPropertyDescriptorMap]:
+		CustomPropertyDescriptorMap[SelfProperty] extends PropertyDescriptorObject<infer R>
+			? R : SimpleType<CustomPropertyDescriptorMap[SelfProperty]>;
 } & {
 	[ChildProperty in keyof ChildrenAccessorConstructorMap]:
 		InstanceType<ChildrenAccessorConstructorMap[ChildProperty]>;
@@ -54,12 +57,13 @@ export interface OptionsConstructorProvider<
 	Context = any
 > {
 	<
-		CustomDescriptor extends BaseDescriptor = {},
+		CustomPropertyDescriptorMap extends PropertyDescriptorMap<Context> = {},
 		ChildrenAccessorConstructorMap extends AccessorConstructorMap = {}
-	> (
-		descriptor?: CustomDescriptor,
-		children?: ChildrenAccessorConstructorMap
-	): AccessorConstructor<CustomDescriptor, ChildrenAccessorConstructorMap>;
+	>(
+		descriptor?: ThisTypedPropertyDescriptorMap<Context, CustomPropertyDescriptorMap>,
+		children?: ChildrenAccessorConstructorMap,
+		eachSet?: (this: Context) => void
+	): AccessorConstructor<Context, CustomPropertyDescriptorMap, ChildrenAccessorConstructorMap>;
 }
 
-export const define: OptionsConstructorProvider;
+export const define: OptionsConstructorProvider<any>

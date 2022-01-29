@@ -1,35 +1,29 @@
-import * as Options from '../index.js';
+import { define } from './type';
 
-const TestOptions = Options.define({
-	test: {
+const Test = define({
+	a: {
 		value: 1,
-		set(value) {
-			console.log(value);
+		validate() {
+			this
 		}
-	}
+	},
+	y: null,
+	b: false,
+	x: Symbol(),
+	e: {
+		value: false
+	},
+	z: () => {}
 }, {
-	sub: Options.define({
-		any: {
-			value: true,
-			validate() {
-			}
-		},
-	}, {})
-});
+	c: define({
+		d: 2
+	})
+}, function eachSet() {
+	this
+})
 
-const options = new TestOptions(new RegExp());
+const test = new Test();
 
-console.log(options.test);
-console.log(options.sub.any);
-
-options.sub.any = 2;
-
-console.log(options.sub.any);
-
-TestOptions.merge(options, {
-	sub: {
-		any: false
-	}
-});
-
-console.log(options.sub.any);
+Test.merge(test, {
+	a
+})

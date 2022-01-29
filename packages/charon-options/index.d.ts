@@ -1,1 +1,1 @@
-export { define } from './types/Options';
+export { define, OptionsConstructorProvider } from './types/Options';
