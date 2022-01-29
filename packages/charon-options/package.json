@@ -1,6 +1,6 @@
 {
 	"name": "@produck/charon-options",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"description": "Reactive options accessor provider.",
 	"keywords": [
 		"options",
