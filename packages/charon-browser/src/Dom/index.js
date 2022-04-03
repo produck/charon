@@ -7,6 +7,7 @@ export { removeEventListener } from './removeEventListener.js';
 export { createElement } from './createElement.js';
 export { appendChild } from './appendChild.js';
 export { removeChild } from './removeChild.js';
+export { insertBefore } from './insertBefore.js';
 export { removeAllChild } from './removeAllChild.js';
 export { removeFromParent } from './removeFromParent.js';
 export { createTextNode } from './createTextNode.js';

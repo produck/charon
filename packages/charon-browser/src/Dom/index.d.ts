@@ -5,6 +5,7 @@ export { removeEventListener } from './removeEventListener';
 export { createElement } from './createElement';
 export { appendChild } from './appendChild';
 export { removeChild } from './removeChild';
+export { insertBefore } from './insertBefore';
 export { removeAllChild } from './removeAllChild';
 export { removeFromParent } from './removeFromParent';
 export { createTextNode } from './createTextNode';

@@ -2,7 +2,7 @@ import * as $C from '@produck/charon';
 import * as $CB from '@produck/charon-browser';
 import * as $E from '@produck/charon-events';
 
-const [btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9] = [
+const [btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10] = [
 	'click me',
 	'remove click',
 	'timer',
@@ -11,7 +11,8 @@ const [btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9] = [
 	'event',
 	'emitterOn',
 	'emitterEmit',
-	'emitterOff'
+	'emitterOff',
+	'insertBefore'
 ].map(innerHTML => {
 	const btn = $CB.Dom.createElement('button');
 
@@ -187,4 +188,12 @@ $CB.Dom.addEventListener(btn8, 'click', () => {
 
 $CB.Dom.addEventListener(btn9, 'click', () => {
 	emitter.off('test', emitterListener);
+});
+
+$CB.Dom.addEventListener(btn10, 'click', () => {
+	const ref = $CB.Dom.createElement('div');
+	const child = $CB.Dom.createElement('a');
+
+	$CB.Dom.appendChild($CB.Dom.body, ref);
+	$CB.Dom.insertBefore($CB.Dom.body, child, ref);
 });
