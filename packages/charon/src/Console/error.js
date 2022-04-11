@@ -1,1 +1,0 @@
-export const error = console.error;
