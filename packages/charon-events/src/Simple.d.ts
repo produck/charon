@@ -1,7 +1,7 @@
 type Listener<C> = (this: C, ...args: any[]) => void;
 
-interface EventListenerMap {
-	[key: string]: Array<Listener>;
+interface EventListenerMap<C> {
+	[key: string]: Array<Listener<C>>;
 }
 
 export class SimpleEventEmitter<C = void> {

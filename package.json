@@ -6,9 +6,13 @@
     "build:doc": "rm -rf ./docs && jsdoc -c ./.jsdoc.json --verbose",
     "deps:install": "npm install && lerna bootstrap",
     "deps:clean": "lerna clean -y",
-		"git:all": "git log --pretty=tformat: --numstat . \":(exclude)*-lock*\"",
-		"git:calc": "awk '{a+=$1;s+=$2;l+=$1-$2}END{printf \"+%s -%s =%s\",a,s,l}'",
-		"git:lines": "npm run git:all | npm run git:calc"
+    "git:all": "git log --pretty=tformat: --numstat . \":(exclude)*-lock*\"",
+    "git:calc": "awk '{a+=$1;s+=$2;l+=$1-$2}END{printf \"+%s -%s =%s\",a,s,l}'",
+    "git:lines": "npm run git:all | npm run git:calc",
+		"api:extractor": "api-extractor run -c scripts/api-extractor.json",
+		"api:documenter": "api-documenter markdown -i scripts/temp -o scripts/vue-docs/charon",
+		"doc:dev": "vuepress dev scripts/vue-docs",
+		"doc:build": "vuepress build scripts/vue-docs"
   },
   "repository": {
     "type": "git",
@@ -25,8 +29,12 @@
   },
   "homepage": "https://github.com/produck/charon#readme",
   "devDependencies": {
+    "@microsoft/api-documenter": "^7.17.7",
+    "@microsoft/api-extractor": "^7.22.0",
+    "@vuepress/plugin-back-to-top": "^1.9.7",
     "jsdoc": "^3.6.7",
     "lerna": "^4.0.0",
-    "minami": "^1.2.3"
+    "minami": "^1.2.3",
+    "vuepress": "^1.9.7"
   }
 }

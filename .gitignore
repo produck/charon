@@ -108,3 +108,7 @@ docs
 .dev
 temp
 .vscode
+
+# api-documenter generater markdowns
+/scripts/vue-docs/charon/
+docs-dist
