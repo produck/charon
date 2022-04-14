@@ -27,4 +27,4 @@ export const entries = OBJECT.entries;
 export const getOwnPropertyDescriptors = OBJECT.getOwnPropertyDescriptors;
 
 // es2019
-// export const fromEntries = OBJECT.fromEntries;
+export const fromEntries = OBJECT.fromEntries;

@@ -9,10 +9,10 @@
     "git:all": "git log --pretty=tformat: --numstat . \":(exclude)*-lock*\"",
     "git:calc": "awk '{a+=$1;s+=$2;l+=$1-$2}END{printf \"+%s -%s =%s\",a,s,l}'",
     "git:lines": "npm run git:all | npm run git:calc",
-		"api:extractor": "api-extractor run -c scripts/api-extractor.json",
-		"api:documenter": "api-documenter markdown -i scripts/temp -o scripts/vue-docs/charon",
-		"doc:dev": "vuepress dev scripts/vue-docs",
-		"doc:build": "vuepress build scripts/vue-docs"
+    "api:extractor": "api-extractor run -c scripts/api-extractor.json",
+    "api:documenter": "api-documenter markdown -i scripts/temp -o scripts/vue-docs/charon",
+    "doc:dev": "vuepress dev scripts/vue-docs",
+    "doc:build": "vuepress build scripts/vue-docs"
   },
   "repository": {
     "type": "git",
