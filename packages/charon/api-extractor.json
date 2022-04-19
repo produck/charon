@@ -1,20 +1,20 @@
 
 {
   "$schema": "https://developer.microsoft.com/json-schemas/api-extractor/v7/api-extractor.schema.json",
-	"projectFolder": "..",
-	"mainEntryPointFilePath": "<projectFolder>/packages/charon/index.d.ts",
+	"projectFolder": ".",
+	"mainEntryPointFilePath": "<projectFolder>/index.d.ts",
   "compiler": {
-		"tsconfigFilePath": "<projectFolder>/packages/charon/tsconfig.json"
+		"tsconfigFilePath": "<projectFolder>/tsconfig.json"
 	},
 	"apiReport": {
     "enabled": true,
-    "reportFileName": "<packageName>.api.md",
+    "reportFileName": "<unscopedPackageName>.api.md",
 		"reportFolder": "<projectFolder>/scripts/etc/",
     "reportTempFolder": "<projectFolder>/scripts/temp/"
   },
   "docModel": {
       "enabled": true,
-      "apiJsonFilePath": "<projectFolder>/scripts/temp/<packageName>.api.json"
+      "apiJsonFilePath": "<projectFolder>/scripts/temp/<unscopedPackageName>.api.json"
   },
   "dtsRollup": {
     "enabled": false

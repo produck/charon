@@ -110,5 +110,6 @@ temp
 .vscode
 
 # api-documenter generater markdowns
-/scripts/vue-docs/charon/
+packages/charon/scripts/vuepress-docs/charon
 docs-dist
+packages/charon/scripts/etc/*

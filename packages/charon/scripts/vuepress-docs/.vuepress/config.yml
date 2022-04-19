@@ -1,0 +1,40 @@
+base: /
+title: charon
+description: this is test create doc
+host: 0.0.0.0
+port: 3333
+dest: docs-dist
+head:
+- ['link', {rel: 'icon', href: 'logo_zi.png'}]
+locales:
+  /:
+    lang: en-US
+    title: charon
+    description: this is English doc
+  /zh/:
+    lang: zh-CN
+    title: 欢迎
+    description: 这是使用vuepress产生的html
+themeConfig:
+  logo: logo_zi.png
+  nav:
+  -
+    text: Home
+    link: /
+  -
+    text: External
+    link: /github.com
+    target: _blank
+
+  sidebar:
+    /:
+    /charon:
+    - charon.log
+    - charon.error
+    - charon.warn
+  displayAllHeaders: true
+  activeHeaderLinks: false
+  search: true
+
+plugins:
+  - '@vuepress/plugin-back-to-top'

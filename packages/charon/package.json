@@ -30,12 +30,20 @@
 	},
 	"scripts": {
 		"lint": "eslint --fix ./**/*.js",
-		"prepublish": "npm run lint"
+		"prepublish": "npm run lint",
+		"api:md": "api-documenter markdown -i scripts/temp -o scripts/vuepress-docs/charon",
+		"api:docs": "node ./scripts/index.cjs && npm run api:md",
+		"doc:dev": "vuepress dev ./scripts/vuepress-docs",
+		"doc:build": "vuepress build ./scripts/vuepress-docs"
 	},
 	"bugs": {
 		"url": "https://github.com/produck/charon/issues"
 	},
 	"devDependencies": {
-		"eslint": "^8.5.0"
+		"@microsoft/api-documenter": "^7.17.9",
+		"@microsoft/api-extractor": "^7.22.2",
+		"@vuepress/plugin-back-to-top": "^1.9.7",
+		"eslint": "^8.5.0",
+		"vuepress": "^1.9.7"
 	}
 }
