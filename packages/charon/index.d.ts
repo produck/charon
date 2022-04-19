@@ -6,4 +6,8 @@ import * as Reflect from './src/Reflect';
 import * as Math from './src/Math';
 
 export { Lang, Type, Console, Object, Reflect, Math };
+
+/**
+ * noop function
+ */
 export function NOOP(): void;

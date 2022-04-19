@@ -100,7 +100,7 @@ function entries<T>(o: { [s: string]: T } | ArrayLike<T>): [string, T][];
 // @public
 function entries(o: {}): [string, any][];
 
-// @public (undocumented)
+// @public
 function error(message?: any, ...optionalParams: any[]): void;
 
 // @public
@@ -163,7 +163,7 @@ function hypot(...values: number[]): number;
 // @public
 function imul(x: number, y: number): number;
 
-// @public (undocumented)
+// @public
 function instanceOf(object: object, constructor: Function): boolean;
 
 declare namespace Is {
@@ -188,19 +188,19 @@ declare namespace Is {
 // @public
 function is(value1: any, value2: any): boolean;
 
-// @public (undocumented)
+// @public
 function isArray(any: any): boolean;
 
-// @public (undocumented)
+// @public
 function isArrayBuffer(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isBigInt(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isBoolean(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isDate(operand: any): boolean;
 
 // @public
@@ -212,76 +212,76 @@ function isExtensible_2(target: object): boolean;
 // @public
 function isFrozen(o: any): boolean;
 
-// @public (undocumented)
+// @public
 function isFunction(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isNaN_2(any: any): boolean;
 
-// @public (undocumented)
+// @public
 function isNotArray(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isNotArrayBuffer(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isNotBigInt(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isNotBoolean(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isNotDate(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isNotFunction(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isNotNaN(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isNotNull(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isNotNumber(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isNotObject(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isNotRegExp(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isNotString(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isNotSymbol(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isNotUndefined(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isNull(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isNumber(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isObject(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isRegExp(operand: any): boolean;
 
 // @public
 function isSealed(o: any): boolean;
 
-// @public (undocumented)
+// @public
 function isString(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isSymbol(operand: any): boolean;
 
-// @public (undocumented)
+// @public
 function isUndefined(operand: any): boolean;
 
 // @public
@@ -307,7 +307,7 @@ const LN10: number;
 // @public
 const LN2: number;
 
-// @public (undocumented)
+// @public
 function log(message?: any, ...optionalParams: any[]): void;
 
 // @public
@@ -379,7 +379,7 @@ function max(...values: number[]): number;
 // @public
 function min(...values: number[]): number;
 
-// @public (undocumented)
+// @public
 export function NOOP(): void;
 
 declare namespace Not {
@@ -513,25 +513,25 @@ declare namespace Throw {
     }
 }
 
-// @public (undocumented)
+// @public
 function throwError(message: string, ErrorType?: Function): unknown;
 
-// @public (undocumented)
+// @public
 function throwEvalError(message: string): unknown;
 
-// @public (undocumented)
+// @public
 function throwRangeError(message: string): unknown;
 
-// @public (undocumented)
+// @public
 function throwReferenceError(message: string): unknown;
 
-// @public (undocumented)
+// @public
 function throwSyntaxError(message: string): unknown;
 
-// @public (undocumented)
+// @public
 function throwTypeError(message: string): unknown;
 
-// @public (undocumented)
+// @public
 function throwURIError(message: string): unknown;
 
 // @public
@@ -559,10 +559,10 @@ declare namespace Type {
 }
 export { Type }
 
-// @public (undocumented)
+// @public
 function typeOf(operand: any): string;
 
-// @public (undocumented)
+// @public
 function typeOfEquel(operand: any, type: string): boolean;
 
 // @public
@@ -571,7 +571,7 @@ function values<T>(o: { [s: string]: T } | ArrayLike<T>): T[];
 // @public
 function values(o: {}): any[];
 
-// @public (undocumented)
+// @public
 function warn(message?: any, ...optionalParams: any[]): void;
 
 // (No @packageDocumentation comment for this package)
