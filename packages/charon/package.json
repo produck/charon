@@ -31,10 +31,10 @@
 	"scripts": {
 		"lint": "eslint --fix ./**/*.js",
 		"prepublish": "npm run lint",
-		"api:md": "api-documenter markdown -i scripts/temp -o scripts/vuepress-docs/charon",
+		"api:md": "api-documenter markdown -i scripts/temp -o vuepress-docs/charon",
 		"api:docs": "node ./scripts/index.cjs && npm run api:md",
-		"doc:dev": "vuepress dev ./scripts/vuepress-docs",
-		"doc:build": "vuepress build ./scripts/vuepress-docs"
+		"doc:dev": "vuepress dev ./vuepress-docs",
+		"doc:build": "vuepress build ./vuepress-docs"
 	},
 	"bugs": {
 		"url": "https://github.com/produck/charon/issues"
