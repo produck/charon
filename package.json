@@ -3,13 +3,12 @@
   "version": "0.1.0",
   "description": "Doing small thing for compressing bundle by tree shaking",
   "scripts": {
-    "build:doc": "rm -rf ./docs && jsdoc -c ./.jsdoc.json --verbose",
     "deps:install": "npm install && lerna bootstrap",
     "deps:clean": "lerna clean -y",
     "git:all": "git log --pretty=tformat: --numstat . \":(exclude)*-lock*\"",
     "git:calc": "awk '{a+=$1;s+=$2;l+=$1-$2}END{printf \"+%s -%s =%s\",a,s,l}'",
     "git:lines": "npm run git:all | npm run git:calc"
- },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/produck/charon.git"
@@ -25,8 +24,6 @@
   },
   "homepage": "https://github.com/produck/charon#readme",
   "devDependencies": {
-    "jsdoc": "^3.6.7",
-    "lerna": "^4.0.0",
-    "minami": "^1.2.3"
+    "lerna": "^4.0.0"
   }
 }

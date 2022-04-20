@@ -1,5 +1,1 @@
-*.js    eol=crlf
-*.ts    eol=crlf
-*.json  eol=crlf
-*.md    eol=crlf
-*.styl  eol=crlf
+* text eol=crlf

@@ -88,9 +88,6 @@ dist
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
 
-# vuepress build output
-.vuepress/dist
-
 # Serverless directories
 .serverless/
 
@@ -104,11 +101,9 @@ dist
 .tern-port
 
 /out
-docs
 .dev
 temp
 .vscode
 
-# api-documenter generater markdowns
-packages/charon/vuepress-docs/charon
-docs-dist
+# api-documenter director
+packages/charon/docs/charon
