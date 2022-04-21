@@ -574,6 +574,4 @@ function values(o: {}): any[];
 // @public
 function warn(message?: any, ...optionalParams: any[]): void;
 
-// (No @packageDocumentation comment for this package)
-
 ```

@@ -3,7 +3,7 @@ home: true
 homeImage: /logo_zi.png
 homeText: Charon
 tagline: Charon
-actionText: 快速上手
+actionText: start
 actionLink: /charon/
 features:
 - title: api-extractor
