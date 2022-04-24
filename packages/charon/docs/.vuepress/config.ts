@@ -1,19 +1,26 @@
-import { defineConfig } from "vuepress/config"
-import { getCharonSidebar } from "./util/sidebar"
-
+import { defineConfig } from "vuepress/config";
+import { getCharonSidebar, getVersion } from "./util";
 
 export default defineConfig({
 	title: 'charon',
-	description: 'this is test create doc',
+	description: 'optimize the bundle file',
 	host: '0.0.0.0',
 	port: 3333,
 	themeConfig: {
 		nav: [
 			{
-				text: 'v0.2.2',
+				text: 'Guide',
+				link: '/guide/guide',
+			},
+			{
+				text: 'API',
+				link: '/charon/charon'
+			},
+			{
+				text: getVersion(),
 				items: [
 					{
-						text: 'v0.2.2',
+						text:  getVersion(),
 						link: '/'
 					}
 				]

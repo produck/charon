@@ -1,1 +1,0 @@
-export function getCharonSidebar(): any

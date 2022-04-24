@@ -21,3 +21,10 @@ export function getCharonSidebar() {
 		children
 	}]
 }
+
+export function getVersion() {
+	const content = fs.readFileSync(path.resolve('package.json'), { encoding: 'utf8' });
+	const data = JSON.parse(content);
+	return 'V ' + data.version
+}
+
