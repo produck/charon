@@ -81,5 +81,8 @@ export default {
 	},
 	plugins: [
 		'@vuepress/plugin-back-to-top'
-	]
+	],
+	markdown: {
+		lineNumbers: false
+	}
 }
