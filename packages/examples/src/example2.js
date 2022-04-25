@@ -1,10 +1,17 @@
-import { Math, Lang, Type, Object } from '@produck/charon';
+import { Lang, Type } from '@produck/charon';
 
-const a = 1.2, b = 'bb';
-export const o = {
-	a: Math.abs(a),
-	b: Math.random(),
-	c: Math.abs(c),
-	d: Type.isString(b)
+export const multiply = (x, y, scalar) => {
+	if(Type.Not.Number(x)) {
+		Lang.Throw.Error('x must be number');
+	}
+
+	if(Type.Not.Number(y)) {
+		Lang.Throw.Error('y must be number');
+	}
+
+	if(Type.Not.Number(scalar)) {
+		Lang.Throw.Error('scalar must be number');
+	}
+
+	return [x * scalar, y * scalar];
 }
-

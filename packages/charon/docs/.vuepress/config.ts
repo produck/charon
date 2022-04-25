@@ -1,9 +1,46 @@
-import { defineConfig } from "vuepress/config";
-import { getCharonSidebar, getVersion } from "./util";
+import 'vuepress/config';
+import * as fs from 'fs';
+import * as path from 'path';
 
-export default defineConfig({
+function getCharonSidebar() {
+	const filenameMap = {};
+	const reg = /^[^\.]*\.md/ig;
+
+	fs.readdirSync(path.resolve('docs/charon'))
+		.filter(filename => !reg.test(filename))
+		.forEach(name => {
+			filenameMap[name.split('.')[1]] = true
+		})
+
+	const children = [];
+
+	Object.keys(filenameMap).forEach(name => {
+		children.push([
+			`/charon/charon.${name}`,
+			name[0].toUpperCase() + name.slice(1)
+		])
+	})
+
+	return [{
+		title: '@produck/charon',
+		path: '/charon/charon',
+		sidebarDepth: 2,
+		collapsable: false,
+		children
+	}]
+}
+
+function getPackageInfo() {
+	const content = fs.readFileSync(path.resolve('package.json'), 'utf8');
+
+	return JSON.parse(content);
+}
+
+const packageInfo = getPackageInfo();
+
+export default {
 	title: 'charon',
-	description: 'optimize the bundle file',
+	description: 'more common statements more short',
 	host: '0.0.0.0',
 	port: 3333,
 	themeConfig: {
@@ -17,17 +54,17 @@ export default defineConfig({
 				link: '/charon/charon'
 			},
 			{
-				text: getVersion(),
+				text: `v${packageInfo.version}`,
 				items: [
 					{
-						text:  getVersion(),
+						text: `v${packageInfo.version}`,
 						link: '/'
 					}
 				]
 			},
 			{
 				text: 'GitHub',
-				link: 'https://github.com/produck/charon',
+				link:  packageInfo.repository.url,
 				target: '_blank'
 			}
 		],
@@ -45,4 +82,4 @@ export default defineConfig({
 	plugins: [
 		'@vuepress/plugin-back-to-top'
 	]
-})
+}
