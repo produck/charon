@@ -22,7 +22,7 @@ function getCharonSidebar() {
 	})
 
 	return [{
-		title: '@produck/charon',
+		title: 'API Reference',
 		path: '/charon/charon',
 		sidebarDepth: 2,
 		collapsable: false,
@@ -40,17 +40,17 @@ const packageInfo = getPackageInfo();
 
 export default {
 	title: 'charon',
-	description: 'more common statements more short',
+	description: 'more common statements more smaller',
 	host: '0.0.0.0',
 	port: 3333,
 	themeConfig: {
 		nav: [
 			{
 				text: 'Guide',
-				link: '/guide/guide',
+				link: '/guide/',
 			},
 			{
-				text: 'API',
+				text: 'API Reference',
 				link: '/charon/charon'
 			},
 			{
@@ -68,14 +68,20 @@ export default {
 				target: '_blank'
 			}
 		],
-		sidebar: [
-			{
-				title: 'Home',
-				path: '/charon',
-				collapsable: false,
-				children: getCharonSidebar()
-			}
-		],
+		sidebar: {
+			'/guide/': [
+				{
+					title: 'Guide',
+					sidebarDepth: 2,
+					collapsable: false,
+					children: [
+						['', 'Introduction'],
+						['started', 'Getting Started']
+					]
+				}
+			],
+			'/charon/': getCharonSidebar()
+		},
 		activeHeaderLinks: true,
 		search: true
 	},

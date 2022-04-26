@@ -5,20 +5,33 @@
 .layout-column {
 	display: flex;
 	justify-content: space-around;
+	position: relative;
 }
 
 .layout-column .language-js {
 	flex: 1;
 }
 
-.layout-column .language-js:last-child {
-	margin-left: 1rem;
-}
-
-.layout-column-min {
-	margin-top: 1rem;
+.layout-column .extra-class:last-child {
+	margin-left: 1em;
 }
 
 .layout-column-min pre {
 	white-space: normal;
+}
+
+.bundle-size {
+		position: absolute;
+    z-index: 3;
+    bottom: 0;
+    font-size: 0.75rem;
+    color: #ffffff66;
+}
+
+.bundle-left {
+    right: calc(50% + 1.5em);
+}
+
+.bundle-right {
+	right: 1em;
 }

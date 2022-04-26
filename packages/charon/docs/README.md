@@ -3,9 +3,9 @@ home: true
 homeImage: /logo_zi.png
 homeText: Charon
 actionText: Get Started
-actionLink: /charon/
+actionLink: /guide/started
 features:
-- title: More Short
+- title: More Smaller
   details: The more the same statements are used, the smaller the final packaged file is.
 - title: More Ugly
   details: Convert common statements into function identifiers and you will see many identifiers instead of statements in the final output.
@@ -15,7 +15,9 @@ features:
 
 <!-- next 排版，高度，换行（white-space: normal）, 计算出字节数 -->
 
-## example
+## Example
+
+**The multiply function is to translate one tuple to another tuple . this function accepts four arguments which need to check the type and return the new tuple .**
 
 example.js :
 <div class="layout-column">
@@ -25,6 +27,8 @@ example.js :
 
 </div>
 
+**The above codes are bundled by rollup with terser plugin and the results are as follows :**
+
 bundle.min.js :
 <div class="layout-column layout-column-min">
 
@@ -33,4 +37,9 @@ bundle.min.js :
 
 </div>
 
-Based on charon package we can see that it will convert common statements into function identifiers. After the same statements appear they will be replaced by identifiers. If the more statements appear the smaller the final output file will be.
+<div class="layout-column">
+	<p class="bundle-size bundle-left">263b</p>
+	<p class="bundle-size bundle-right">301b</p>
+</div>
+
+#### Based on charon package we can see that it will convert common statements into function identifiers. After the same statements appear they will be replaced by identifiers. more statements reused, the final output file will be more smaller.
