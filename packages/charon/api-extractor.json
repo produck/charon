@@ -8,12 +8,12 @@
 	"apiReport": {
 		"enabled": true,
 		"reportFileName": "<unscopedPackageName>.api.md",
-		"reportFolder": "<projectFolder>/scripts/etc/",
-		"reportTempFolder": "<projectFolder>/scripts/temp/"
+		"reportFolder": "<projectFolder>/docs/.vuepress/etc/",
+		"reportTempFolder": "<projectFolder>/docs/.vuepress/temp/"
 	},
 	"docModel": {
 		"enabled": true,
-		"apiJsonFilePath": "<projectFolder>/scripts/temp/<unscopedPackageName>.api.json"
+		"apiJsonFilePath": "<projectFolder>/docs/.vuepress/temp/<unscopedPackageName>.api.json"
 	},
 	"dtsRollup": {
 		"enabled": false

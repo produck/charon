@@ -16,9 +16,7 @@
 	},
 	"scripts": {
 		"dev-rollup": "rollup --config script/rollup.config.dev.js --watch",
-		"build-rollup": "rm -rf ./dist/rollup && rollup --config script/rollup.config.js",
-		"update-md": "node script/updatemd.js",
-		"build-example": "rollup -c script/rollup.config.example.js && npm run update-md"
+		"build-rollup": "rm -rf ./dist/rollup && rollup --config script/rollup.config.js"
 	},
 	"devDependencies": {
 		"@produck/charon": "^0.2.2",

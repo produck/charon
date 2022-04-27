@@ -31,9 +31,11 @@
 	"scripts": {
 		"lint": "eslint --fix ./**/*.js",
 		"prepublish": "npm run lint",
-		"api:md": "api-documenter markdown -i scripts/temp -o docs/charon",
+		"update:md": "node scripts/updatemd.cjs",
+		"build:sample": "rollup -c scripts/rollup.sample.js && npm run update:md",
+		"api:md": "api-documenter markdown -i docs/.vuepress/temp -o docs/charon",
 		"copy:md": "cp -r docs/charon/ docs/zh/",
-		"api:docs": "node ./scripts/index.cjs && npm run api:md && npm run copy:md",
+		"api:docs": "node ./scripts/extractor.cjs && npm run api:md && npm run copy:md",
 		"doc:dev": "vuepress dev ./docs",
 		"doc:build": "vuepress build ./docs"
 	},
@@ -43,8 +45,12 @@
 	"devDependencies": {
 		"@microsoft/api-documenter": "^7.17.9",
 		"@microsoft/api-extractor": "^7.22.2",
+		"@rollup/plugin-alias": "^3.1.9",
+		"@rollup/plugin-node-resolve": "^13.2.1",
 		"@vuepress/plugin-back-to-top": "^1.9.7",
 		"eslint": "^8.5.0",
+		"rollup": "^2.70.2",
+		"rollup-plugin-terser": "^7.0.2",
 		"vuepress": "^1.9.7"
 	}
 }

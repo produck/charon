@@ -19,8 +19,8 @@ The multiply function is to translate one tuple to another tuple. this function 
 
 <div class="layout-column">
 
-<<< @/../examples/src/example2.js
-<<< @/../examples/src/example3.js
+<<< @/docs/.vuepress/sample/sample-charon.js
+<<< @/docs/.vuepress/sample/sample.js
 
 </div>
 
@@ -28,14 +28,14 @@ The above codes are bundled by rollup with terser plugin and the results are as 
 
 <div class="layout-column layout-column-min">
 
-<<< @/../examples/dist/example/example2.min.js
-<<< @/../examples/dist/example/example3.min.js
+<<< @/docs/.vuepress/sample/output/sample-charon.min.js
+<<< @/docs/.vuepress/sample/output/sample.min.js
 
 </div>
 
 <div class="layout-column">
-	<p class="bundle-size bundle-left">263b</p>
-	<p class="bundle-size bundle-right">301b</p>
+	<p class="bundle-size bundle-left">281b</p>
+	<p class="bundle-size bundle-right">317b</p>
 </div>
 
 Based on charon package we can see that it will convert common statements into function identifiers. After the same statements appear they will be replaced by identifiers. more statements reused, the final output file will be more smaller.

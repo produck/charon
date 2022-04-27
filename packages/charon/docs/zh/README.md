@@ -19,8 +19,8 @@ features:
 
 <div class="layout-column">
 
-<<< @/../examples/src/example2.js
-<<< @/../examples/src/example3.js
+<<< @/docs/.vuepress/sample/sample-charon.js
+<<< @/docs/.vuepress/sample/sample.js
 
 </div>
 
@@ -28,14 +28,14 @@ features:
 
 <div class="layout-column layout-column-min">
 
-<<< @/../examples/dist/example/example2.min.js
-<<< @/../examples/dist/example/example3.min.js
+<<< @/docs/.vuepress/sample/output/sample-charon.min.js
+<<< @/docs/.vuepress/sample/output/sample.min.js
 
 </div>
 
 <div class="layout-column">
-	<p class="bundle-size bundle-left">263b</p>
-	<p class="bundle-size bundle-right">301b</p>
+	<p class="bundle-size bundle-left">281b</p>
+	<p class="bundle-size bundle-right">317b</p>
 </div>
 
 我们可以看到使用了charon的代码在最后打包输出的代码中讲常用的语句转换为了函数，并在有重复代码的地方使用了函数标识符进行了替代，缩短了输出代码的长度，而且重复语句使用越多，打包之后文件就会越小。
