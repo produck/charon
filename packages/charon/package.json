@@ -32,7 +32,8 @@
 		"lint": "eslint --fix ./**/*.js",
 		"prepublish": "npm run lint",
 		"api:md": "api-documenter markdown -i scripts/temp -o docs/charon",
-		"api:docs": "node ./scripts/index.cjs && npm run api:md",
+		"copy:md": "cp -r docs/charon/ docs/zh/",
+		"api:docs": "node ./scripts/index.cjs && npm run api:md && npm run copy:md",
 		"doc:dev": "vuepress dev ./docs",
 		"doc:build": "vuepress build ./docs"
 	},

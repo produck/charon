@@ -1,16 +1,16 @@
-# Getting Started
+# 快速上手
 
-## Prerequisites
+## 前提条件
 
 - [Nodejs](https://nodejs.org/en/)
 
-## Installation
+## 安装
 
 ```sh
 npm install @produck/charon
 ```
 
-## Quick Start
+## 使用
 
 ```js
 import { Type, Lang } from '@produck/charon';
@@ -30,5 +30,5 @@ function sum(x, y) {
 ```
 
 ::: warning
-You should make sure that the charon version is consistent when packages depend on charon in lerna project otherwise the bundle will has duplicate content.
+如果和lerna一起使用，请确保所有依赖了charon的包的版本必须一致，防止造成最终打包结果中输出了重复的charon内容
 :::

@@ -13,13 +13,10 @@ features:
   details: Based on the ESM module, you can use the tree shaking function of the module bundler to reduce useless code.
 ---
 
-<!-- next 排版，高度，换行（white-space: normal）, 计算出字节数 -->
-
 ## Example
 
 **The multiply function is to translate one tuple to another tuple . this function accepts four arguments which need to check the type and return the new tuple .**
 
-example.js :
 <div class="layout-column">
 
 <<< @/../examples/src/example2.js
@@ -29,7 +26,6 @@ example.js :
 
 **The above codes are bundled by rollup with terser plugin and the results are as follows :**
 
-bundle.min.js :
 <div class="layout-column layout-column-min">
 
 <<< @/../examples/dist/example/example2.min.js
@@ -43,3 +39,7 @@ bundle.min.js :
 </div>
 
 #### Based on charon package we can see that it will convert common statements into function identifiers. After the same statements appear they will be replaced by identifiers. more statements reused, the final output file will be more smaller.
+
+::: slot footer
+MIT License | Copyright (c) 2021 Produck Shop
+:::
