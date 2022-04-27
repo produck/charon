@@ -15,7 +15,7 @@ features:
 
 ## Example
 
-**The multiply function is to translate one tuple to another tuple . this function accepts four arguments which need to check the type and return the new tuple .**
+The multiply function is to translate one tuple to another tuple. this function accepts four arguments which need to check the type and return the new tuple.
 
 <div class="layout-column">
 
@@ -24,7 +24,7 @@ features:
 
 </div>
 
-**The above codes are bundled by rollup with terser plugin and the results are as follows :**
+The above codes are bundled by rollup with terser plugin and the results are as follows :
 
 <div class="layout-column layout-column-min">
 
@@ -38,7 +38,7 @@ features:
 	<p class="bundle-size bundle-right">301b</p>
 </div>
 
-#### Based on charon package we can see that it will convert common statements into function identifiers. After the same statements appear they will be replaced by identifiers. more statements reused, the final output file will be more smaller.
+Based on charon package we can see that it will convert common statements into function identifiers. After the same statements appear they will be replaced by identifiers. more statements reused, the final output file will be more smaller.
 
 ::: slot footer
 MIT License | Copyright (c) 2021 Produck Shop
