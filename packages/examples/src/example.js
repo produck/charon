@@ -197,3 +197,19 @@ $CB.Dom.addEventListener(btn10, 'click', () => {
 	$CB.Dom.appendChild($CB.Dom.body, ref);
 	$CB.Dom.insertBefore($CB.Dom.body, child, ref);
 });
+
+const o = {
+	a: $C.Array.of('a', 'd', 'd', 'r', 'e', 's'),
+	b: $C.Array.of('c', 'o', 'd', 'e'),
+	c: $C.Array.from('string'),
+	d: $C.Array.from('number'),
+	e: $C.Array.isArray([1,2]),
+	f: $C.Array.isArray('dsfds')
+}
+
+
+
+
+
+
+

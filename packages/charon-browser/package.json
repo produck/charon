@@ -36,5 +36,8 @@
 		"@microsoft/api-documenter": "^7.13.77",
 		"@microsoft/api-extractor": "^7.19.2",
 		"eslint": "^8.5.0"
+	},
+	"dependencies": {
+		"@produck/charon": "^0.2.2"
 	}
 }

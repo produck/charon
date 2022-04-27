@@ -4,6 +4,7 @@ import * as Console from './src/Console.js';
 import * as Math from './src/Math.js';
 import * as Object from './src/Object.js';
 import * as Reflect from './src/Reflect.js';
+import * as Array from './src/Array/index.js';
 
-export { Lang, Type, Console, Math, Object, Reflect };
+export { Lang, Type, Console, Math, Object, Reflect, Array };
 export const NOOP = () => {};
