@@ -41,5 +41,5 @@ The above codes are bundled by rollup with terser plugin and the results are as 
 Based on charon package we can see that it will convert common statements into function identifiers. After the same statements appear they will be replaced by identifiers. more statements reused, the final output file will be more smaller.
 
 ::: slot footer
-MIT License | Copyright (c) 2021 Produck Shop
+MIT License | Copyright(c) 2022 Produck Shop
 :::

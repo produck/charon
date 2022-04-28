@@ -31,13 +31,12 @@
 	"scripts": {
 		"lint": "eslint --fix ./**/*.js",
 		"prepublish": "npm run lint",
-		"update:md": "node scripts/updatemd.cjs",
-		"build:sample": "rollup -c scripts/rollup.sample.js && npm run update:md",
+		"build:sample": "rollup -c scripts/rollup.sample.js && node scripts/updatemd.cjs",
 		"api:md": "api-documenter markdown -i docs/.vuepress/temp -o docs/charon",
 		"copy:md": "cp -r docs/charon/ docs/zh/",
-		"api:docs": "node ./scripts/extractor.cjs && npm run api:md && npm run copy:md",
+		"api:docs": "node ./scripts/extractor.cjs && npm run api:md && npm run copy:md && npm run build:sample",
 		"doc:dev": "vuepress dev ./docs",
-		"doc:build": "vuepress build ./docs"
+		"doc:build": "npm run api:docs && vuepress build ./docs"
 	},
 	"bugs": {
 		"url": "https://github.com/produck/charon/issues"

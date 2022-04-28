@@ -16,6 +16,15 @@ function acosh(x: number): number;
 // @public
 function apply(target: Function, thisArgument: any, argumentsList: ArrayLike<any>): any;
 
+declare namespace Array_2 {
+    export {
+        of,
+        from,
+        isArray_2 as isArray
+    }
+}
+export { Array_2 as Array }
+
 // @public
 function asin(x: number): number;
 
@@ -57,9 +66,9 @@ function clz32(x: number): number;
 
 declare namespace Console_2 {
     export {
+        error,
         log,
-        warn,
-        error
+        warn
     }
 }
 export { Console_2 as Console }
@@ -120,6 +129,9 @@ function freeze<T extends Function>(f: T): T;
 
 // @public
 function freeze<T>(o: T): Readonly<T>;
+
+// @public
+function from<T>(arrayLike: ArrayLike<T>): T[];
 
 // @public
 function fromEntries<T = any>(entries: Iterable<readonly [PropertyKey, T]>): { [k: string]: T };
@@ -190,6 +202,9 @@ function is(value1: any, value2: any): boolean;
 
 // @public
 function isArray(any: any): boolean;
+
+// @public
+function isArray_2(arg: any): arg is any[];
 
 // @public
 function isArrayBuffer(operand: any): boolean;
@@ -427,6 +442,9 @@ declare namespace Object_2 {
     }
 }
 export { Object_2 as Object }
+
+// @public
+function of<T>(...items: T[]): T[];
 
 // @public
 function ownKeys(target: object): (string | symbol)[];

@@ -12,13 +12,17 @@ const sample = fs.readFileSync(
 const readme = fs.readFileSync(path.resolve('docs/README.md'), 'utf8');
 const zhReadme = fs.readFileSync(path.resolve('docs/zh/README.md'), 'utf8');
 
-const newReadme = readme.replace(
-	/bundle-left">[\d\w]+</, `bundle-left">${sampleCharon.length}b<`
-).replace(/bundle-right">[\d\w]+</, `bundle-right">${sample.length}b<`);
+const replaceLeft = /bundle-left">[\d\w]+</;
+const replaceRight = /bundle-right">[\d\w]+</;
+const replaceLicense = /Copyright\(c\)[\s\d]+/;
 
-const newZhReadme = zhReadme.replace(
-	/bundle-left">[\d\w]+</, `bundle-left">${sampleCharon.length}b<`
-).replace(/bundle-right">[\d\w]+</, `bundle-right">${sample.length}b<`);
+const newReadme = readme.replace(replaceLeft, `bundle-left">${sampleCharon.length}b<`)
+	.replace(replaceRight, `bundle-right">${sample.length}b<`)
+	.replace(replaceLicense, `Copyright(c) ${new Date().getFullYear()} `);
+
+const newZhReadme = zhReadme.replace(replaceLeft, `bundle-left">${sampleCharon.length}b<`)
+	.replace(replaceRight, `bundle-right">${sample.length}b<`)
+	.replace(replaceLicense, `Copyright(c) ${new Date().getFullYear()} `);
 
 fs.writeFileSync(path.resolve('docs/README.md'), newReadme, 'utf8');
 fs.writeFileSync(path.resolve('docs/zh/README.md'), newZhReadme, 'utf8');
