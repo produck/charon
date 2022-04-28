@@ -1,6 +1,6 @@
 {
 	"name": "@produck/charon-options",
-	"version": "0.3.3",
+	"version": "0.3.4",
 	"description": "Reactive options accessor provider.",
 	"keywords": [
 		"options",
@@ -33,6 +33,6 @@
 		"url": "https://github.com/produck/charon/issues"
 	},
 	"dependencies": {
-		"@produck/charon": "^0.2.2"
+		"@produck/charon": "^0.3.0"
 	}
 }

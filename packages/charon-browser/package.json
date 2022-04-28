@@ -1,6 +1,6 @@
 {
 	"name": "@produck/charon-browser",
-	"version": "0.1.5",
+	"version": "0.1.6",
 	"description": "Doing small thing about browser api for compressing bundle by tree shaking",
 	"keywords": [
 		"charon",
@@ -38,6 +38,6 @@
 		"eslint": "^8.5.0"
 	},
 	"dependencies": {
-		"@produck/charon": "^0.2.2"
+		"@produck/charon": "^0.3.0"
 	}
 }
