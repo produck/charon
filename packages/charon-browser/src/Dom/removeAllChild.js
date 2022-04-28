@@ -1,3 +1,4 @@
+import { Array } from '@produck/charon';
 import { removeChild } from './removeChild.js';
 
 /**
