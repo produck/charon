@@ -39,9 +39,9 @@ const listener = () => {
 		'isFunction', $C.Type.isFunction(() => {}), $C.Type.Is.Function(() => {}),
 		'isSymbol', $C.Type.isSymbol(Symbol()), $C.Type.Is.Symbol(Symbol()),
 		'isBigInt', $C.Type.isBigInt(BigInt(10)), $C.Type.Is.BigInt(BigInt(10)),
-		'isDate', $C.Type.isDate(new Date()), $C.Type.Is.Date(new Date()),
+		'isDate', $C.Type.isDate($C.New.Date()), $C.Type.Is.Date($C.New.Date()),
 		'isRegExp', $C.Type.isRegExp(new RegExp()), $C.Type.Is.RegExp(new RegExp()),
-		'isArrayBuffer', $C.Type.isArrayBuffer(new ArrayBuffer()), $C.Type.Is.ArrayBuffer(new ArrayBuffer())
+		'isArrayBuffer', $C.Type.isArrayBuffer($C.New.ArrayBuffer()), $C.Type.Is.ArrayBuffer($C.New.ArrayBuffer())
 	);
 	$C.Console.log(
 		'isNotString', $C.Type.Not.String('aaa'),
@@ -55,9 +55,9 @@ const listener = () => {
 		'isNotFunction', $C.Type.Not.Function(() => {}),
 		'isNotSymbol', $C.Type.Not.Symbol(Symbol()),
 		'isNotBigInt', $C.Type.Not.BigInt(BigInt(10)),
-		'isNotDate', $C.Type.Not.Date(new Date()),
+		'isNotDate', $C.Type.Not.Date($C.New.Date()),
 		'isNotRegExp', $C.Type.Not.RegExp(new RegExp()),
-		'isNotArrayBuffer', $C.Type.Not.ArrayBuffer(new ArrayBuffer())
+		'isNotArrayBuffer', $C.Type.Not.ArrayBuffer($C.New.ArrayBuffer())
 	);
 	$C.Console.log(
 		'abs', $C.Math.abs(-1),
@@ -204,12 +204,17 @@ const o = {
 	c: $C.Array.from('string'),
 	d: $C.Array.from('number'),
 	e: $C.Array.isArray([1,2]),
-	f: $C.Array.isArray('dsfds')
+	f: $C.Array.isArray('dsfds'),
+	g: $C.New.Array(5).fill($C.New.Date().getDate()),
+	h: $C.New.Array(5).fill($C.New.Date().getHours()),
+	i: $C.New.Array(5).fill($C.New.Date().getMinutes())
 }
 
+const regA = $C.New.RegExp('a', 'i');
+const regB = $C.New.RegExp('b', 'i');
+$C.Console.log(regA.test('absd'), regA.test('Adbe'), regB.test('HHHUHU'));
 
-
-
-
-
-
+const m1 = $C.New.Map();
+const m2 = $C.New.Map();
+m1.set(regA, '/a/i');
+m2.set(regB, '/b/i');

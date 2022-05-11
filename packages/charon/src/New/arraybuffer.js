@@ -1,0 +1,1 @@
+export const NewArrayBuffer = (length) => new ArrayBuffer(length);

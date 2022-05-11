@@ -1,0 +1,1 @@
+export const NewWeakSet = () => new WeakSet();

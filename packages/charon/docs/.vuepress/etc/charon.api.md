@@ -394,6 +394,61 @@ function max(...values: number[]): number;
 // @public
 function min(...values: number[]): number;
 
+declare namespace New {
+    export {
+        NewArray as Array,
+        NewArrayBuffer as ArrayBuffer,
+        NewDate as Date,
+        NewMap as Map,
+        NewObject as Object,
+        NewPromise as Promise,
+        NewProxy as Proxy,
+        NewRegExp as RegExp,
+        NewSet as Set,
+        NewWeakMap as WeakMap,
+        NewWeakSet as WeakSet
+    }
+}
+export { New }
+
+// @public
+function NewArray<T>(length: number): Array<T>;
+
+// @public
+function NewArrayBuffer(length: number): ArrayBuffer;
+
+// @public
+function NewDate(): Date;
+
+// @public
+function NewMap<K, V>(): Map<K, V>;
+
+// @public
+function NewObject(): Object;
+
+// @public
+function NewPromise<T>(
+	executor: (
+		resolve: (value: T | PromiseLike<T>) => void,
+		reject: (reason?: any) => void
+	) => void
+): Promise<T>;
+
+// @public
+function NewProxy<T extends object>(target: T, handler: ProxyHandler<T>): T;
+
+// @public
+function NewRegExp(pattern: string, flags: string): RegExp;
+
+// @public
+function NewSet<T = any>(): Set<T>;
+
+// @public
+function NewWeakMap<K extends object, V>(): WeakMap<K, V>;
+
+// @public
+function NewWeakSet<T extends object>(): WeakSet<T>;
+
 // @public
 export function NOOP(): void;
 

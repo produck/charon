@@ -1,0 +1,1 @@
+export const NewRegExp = (pattern, flags) => new RegExp(pattern, flags);

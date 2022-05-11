@@ -1,0 +1,1 @@
+export const NewArray = (length) => new Array(length);

@@ -10,8 +10,9 @@ import * as Array from './src/Array';
 import * as Object from './src/Object';
 import * as Reflect from './src/Reflect';
 import * as Math from './src/Math';
+import * as New from './src/New'
 
-export { Lang, Type, Console, Array, Object, Reflect, Math };
+export { Lang, Type, Console, Array, Object, Reflect, Math, New };
 
 /**
  * noop function

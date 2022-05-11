@@ -1,0 +1,1 @@
+export const NewProxy = (target, handler) => new Proxy(target, handler);

@@ -5,6 +5,7 @@ import * as Math from './src/Math.js';
 import * as Object from './src/Object.js';
 import * as Reflect from './src/Reflect.js';
 import * as Array from './src/Array/index.js';
+import * as New from './src/New/index.js';
 
-export { Lang, Type, Console, Math, Object, Reflect, Array };
+export { Lang, Type, Console, Math, Object, Reflect, Array, New };
 export const NOOP = () => {};
